@@ -1,0 +1,27 @@
+---
+comments: true
+date: 2010-04-01 16:59:33
+layout: post
+slug: lol
+title: LOL
+wordpress_id: 150
+categories:
+- 未分类
+---
+
+alright , here we go , sunus in class again which guarantee you there will be another new post is being written.   
+about two days ago , when i just finished the first-simple version of the BOOKINDEX stuff , which i am kind of proud of it , i began to browse on the net and i found a phrase and i like sharing with you guys. 
+
+  
+Take life on , One step at a time , It's gonna happen when it suppose to. 
+
+  
+AND I do believe in this , looking back the times when i encounter with C , that's a total chaos and disaster,for countless errors and warning jumped up on screen. But now , I am just doing a better code than before , or yesterday.   
+Today Is April fool's day , but i am not joking about this.hum,from tomorrow to April 5 , i am going to live a out-of-campus life with some friends , that's just incredibly awesome ! I am looking forward to see you ! and to some of them who i have never hang out with , I feel nervous , but meanwhile , It's fine,though.:D 
+
+So will you just wait and see to find out how CTS sunus is and enjoy the great time in Tianjin.
+
+FYI,Right now, i just put Gnu Gcc into my N900 and it works perfect :D 
+
+    
+

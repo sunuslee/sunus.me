@@ -1,0 +1,33 @@
+---
+comments: true
+date: 2012-02-28 13:09:04
+layout: post
+slug: test
+title: first blog with codes inside
+wordpress_id: 176
+categories:
+- codes
+- python
+---
+
+弄了差不多半个小时，把blog的嵌入代码插件弄好了：）
+早上看ruby的时候了解到一些类的知识，遇到了之前python迟迟不能解决的一个问题。琢磨了一会，mission accomplished!
+嗯，主要就是一个带counter的urlopener, 之前dbci的urlopener在调度上面总是实现地不怎么 'elegant', 如今使用了带counter的urlopener，嗯。。还看得过去:)
+
+
+    
+    
+    # this is a urlopener class with a counter.
+    # sometimes i just this this urlopener to open urls and make schedulings based on counter
+    
+    class opener_with_counter(urllib.FancyURLopener):
+    	#basically, it's just a URLopener class plus a counter.
+    	def __init__(self, *args, **kwargs):
+    		urllib.FancyURLopener.__init__(self, *args, **kwargs)
+    		self.count = 0
+    	
+    	# a warpper of urlopener.open.
+    	def open_with_counter(self, fullurl, data=None):
+    		self.count += 1
+    		return self.open(fullurl, data)
+    
