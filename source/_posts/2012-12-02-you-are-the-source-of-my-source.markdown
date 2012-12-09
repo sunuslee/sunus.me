@@ -23,17 +23,18 @@ i even post a question on Quora, to see and share with other programmers who fee
 
 i really really wish i can spend more that with her, when i had chance, to tell her how i felt about her, face to face.
 
-and another topic, about her, again,(why always her!!) now, i just can not what is REALLY going on, so, wish me luck.
+and another topic, about her, again,(why always her!!) now, i just can not figure out what is REALLY going on, so, wish me luck.
 
 i watch a short video "The Last"
 
 [http://v.youku.com/v_show/id_XNDc3NTg4MjAw.html](http://v.youku.com/v_show/id_XNDc3NTg4MjAw.html)
 
-it's about a guy's view on his previous girlfriends and i somehow, want to write one too.
+it's about a guy's view on his previous girlfriends and i somehow, want to write one too, even though, i am still alone now.
 
 my version is about some programming language i know and how i felt about them, but trust me, in fact, it's
 
 not about programming language, it's about her and some other girls:)
+
 the last is about some options i got and i can not decided which one to choose yet. it really kills me, so, i will let
 
 you know when i make the final decision:)
