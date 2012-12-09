@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2012-12-07T19:37:50+08:00</updated>
+  <updated>2012-12-09T16:52:21+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[hello octopress!]]></title>
+    <link href="http://sunus.me/blog/2012/12/09/hello-octopress/"/>
+    <updated>2012-12-09T15:17:00+08:00</updated>
+    <id>http://sunus.me/blog/2012/12/09/hello-octopress</id>
+    <content type="html"><![CDATA[<p>How this blog looks? i think it&#8217;s awesome!</p>
+
+<p>it&#8217;s powered by <strong>Octopress</strong> and <strong>jekyll</strong> with <strong>git</strong> to do those maintain jobs.</p>
+
+<p>just enjoy this brand new blog:)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[you are the source of my source.]]></title>
@@ -531,19 +544,6 @@ love u all!! let&#8217;s rock 2012!!</p>
 <p>UPDATE: We are going to do it AGAIN! IT&#8217;S GONNA BE CRAZY! CAN’T WAIT TO SEE  U!</p>
 
 <p>[caption id=&#8221;attachment_101&#8221; align=&#8221;aligncenter&#8221; width=&#8221;300&#8221; caption=&#8221;the kids are grownup!&#8221;]<a href="http://sunus.me/wp-content/uploads/2011/02/e696b0e785a7e78987-047.jpg"><img src="http://sunus.me/wp-content/uploads/2011/02/e696b0e785a7e78987-047.jpg?w=300" alt="the kids are grownup!" /></a>[/caption]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello world!]]></title>
-    <link href="http://sunus.me/blog/2011/01/11/hello-world-3/"/>
-    <updated>2011-01-11T21:19:12+08:00</updated>
-    <id>http://sunus.me/blog/2011/01/11/hello-world-3</id>
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://wordpress.com/">WordPress.com</a>.</p>
-
-<p>Now,i  officially moved in WordPress.</p>
-
-<p>Farewell LiveSpace!</p>
 ]]></content>
   </entry>
   
