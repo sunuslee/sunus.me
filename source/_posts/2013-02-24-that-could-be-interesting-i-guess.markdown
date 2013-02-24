@@ -7,6 +7,7 @@ categories: life
 published: true
 ---
 
+** Long time no see **
 
 * Hi, there! First of all, happy new year to you and wish you all have a wonderful new year, i give you my very best wishes here:)
 Yeah, i did quit my job last year and had theses about 40 days of **AWESOME** holidays in my hometown with my family and friends which is fun and happy. We went to couple of places with views, of course, i took some photos, too. But most of those photos are mountains and some kind of **vulgar** pictures. LOL
