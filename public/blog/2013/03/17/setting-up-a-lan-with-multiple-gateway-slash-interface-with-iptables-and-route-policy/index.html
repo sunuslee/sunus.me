@@ -1,0 +1,418 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux - What happens here, stays in here.</title>
+	<meta name="author" content="sunus">
+
+	
+	<meta name="description" content="Introduction First of all, it all because my MacBookPro&#8217;s xl2tp utils can not work under my school&#8217;s networking enviroment. so this is &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="What happens here, stays in here." type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<img src="/images/icon.png" alt="Profile Picture" style="width: 160px;">
+</div>
+<h1><a href="/">What happens here, stays in here.</a></h1>
+<p class="subtitle">I am sunus, A quite normal guy happened to know something about programming. Now, I am trying hard to be a someone that deserve you.</p>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/sunuslee" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/sunuslee" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Setting Up a LAN With Multiple Gateway/interface With Iptables and Route Policy Under Awesome Linux</h1>
+	<div class="entry-content"><h2>Introduction</h2>
+
+<p>First of all, it all because my MacBookPro&#8217;s xl2tp utils can not work under my school&#8217;s networking enviroment. so this is how the post is born.</p>
+
+<p>I have been digging with those stuffs for almost a week, and now, finally i get it rolling and it seems awesome. this post will talks about netfilter known as iptables and ip route policy. and some technic/tool like tcpdump will be involved as well.</p>
+
+<h2>Environment</h2>
+
+<p>The environment i have is like this below:</p>
+
+<pre><code>-----------------    -----------------
+| Slow          |    | Fast          |
+| Internet-1    |    | Internet-2    |
+| 10.10.149.1   |    | 123.150.232.1 |
+-----------------    -----------------
+         |             |
+[eth0.2] |             |[ppp0]
+         |             |
+        --------------------------
+        | Route, Running Linux   |
+        | br-lan: 192.168.1.1    | [br-lan]      ------------------------
+        | ppp0:   123.150.232.74 | --------------| Other Machines in Lan|
+        | eth0.2: 10.10.149.4    |               |-----------------------
+        --------------------------
+        |                        |
+[br-lan]|                        |[br-lan]
+        |                        |
+        |                        |
+        |                        |
+  -------------------------      ----------------------
+  |ArchLinux              |      | MacBook            |
+  |eth0: 192.168.1.245    |      | en0:192.168.1.169  |
+  |ppp0: 180.134.135.173  |      |                    |
+  -------------------------      ----------------------
+        |
+        |
+        |
+        |
+  ------------------
+  | Fast           |
+  | Internet-3     |
+  | 180.134.135.1  |
+  ------------------
+</code></pre>
+
+<p>   after connect the wires. there is three <strong> physic wires </strong>:</p>
+
+<ul>
+<li><strong>Route</strong> <------> <strong>Slow Internet-1 </strong>this is the only one that connects to outside my dorm. via route&#8217;s port WAN.</li>
+<li><strong>Route</strong> <------> <strong> ArchLinux </strong> this one is in a Route&#8217;s port #1 LAN</li>
+<li><strong>Route</strong> <------> <strong> MacBook </strong> same as above, using Route&#8217;s port #2 LAN</li>
+</ul>
+
+
+<p>  There is also something to be noticed:</p>
+
+<ul>
+<li><p>the <strong>ppp0</strong> in <strong>Route</strong> is a high-speed connection(VPN). it needs to go though <strong>eth0.2</strong> to connect the VPN-server, then it will generate a Virtual Network InterFace, that is, ppp0.</p></li>
+<li><p>the another <strong>ppp0</strong> in <strong>ArchLinux</strong> is also the high-speed connection. but firstly, it goes to <strong>Route</strong>, then the VPN-server.</p></li>
+<li><p>in this environment, you can consider those ppp0 as real NICs that are connected to the internet as well.</p></li>
+<li><p>So, we can say eth0.2 and two ppp0 are all outgoing Interfaces.</p></li>
+</ul>
+
+
+<h2>Solutions</h2>
+
+<ul>
+<li><p>   I repeat what i want to accomplished here:</p>
+
+<p>   1 .    i want my MacBook can connected to the internet.</p>
+
+<p>   2 .    i want my MacBook&#8217;s internet connection to be as <strong>FAST</strong> as possible.</p></li>
+<li><p>   Before we get started, there&#8217;s something we can do and can&#8217;t do, in general.</p>
+
+<p>   1 .    Seting the <strong>default route</strong> to 180.134.135.1 for ArchLinux and a route to lan. We do this because we want all the trafftic goes to a fast internet connecting while we keep the connection to the other machines in the lan still work.</p>
+
+<pre><code># route add -net 192.168.1.0/24 gw 192.168.1.1 dev eth0
+# route add default gw 180.134.135.1 dev ppp0
+</code></pre>
+
+<p>   2 .    Because there is other machines in the lan, so we can not set 123.150.232.1 as <strong>default route</strong> for Route, just like the ArchLinux. there is only <strong> me </strong> can access the Fast Internet-2.( The <strong>Benefit</strong> of being me or with me :) lol! )</p></li>
+</ul>
+
+
+<h3>The Slow Solution</h3>
+
+<ul>
+<li><p>   Making the MacBook can connect to the internet, but it just too slow for me. Just set up machines and route like the diagram above, it will result this:</p>
+
+<p>   1 .  the ArchLinux using Internet-3.</p>
+
+<p>   2 .  the MacBookPro using Slow-Internet-1</p></li>
+</ul>
+
+
+<h3>The A Little Bit Faster Solution</h3>
+
+<ul>
+<li><p>   Making the MacBook Using ArchLinux&#8217;s Internet-3 and the ArchLinux still keep unchanged in Slow Solution. This solution requires those steps.</p>
+
+<ul>
+<li><p>  in the MacBook, change default route from 192.168.1.1 to 192.168.1.245</p>
+
+<p> In MacBook:
+ # route add default 192.168.1.245
+ # route del default 192.168.1.1</p></li>
+<li><p>  in ArchLinux, set up a route policy/rule</p>
+
+<ul>
+<li><p>  the packets that comes from MacBook(192.168.1.169), Using the gateway of Internet-3.</p>
+
+<pre><code>In ArchLinux:
+# add a empty table to route table
+echo '7375 SunusRules' &gt;&gt; /etc/iproute2/rt_tables
+# add a default route rule to newly create table SunusRules
+ip route add default via 180.134.135.173 dev ppp0 table SunusRules
+# add this table to routing rules, all the packet comes from MacBook, apply this route rule.
+ip rule add from 192.168.1.169 table SunusRules
+</code></pre></li>
+<li><p> We are done here.</p></li>
+<li><p> In fact, i don&#8217;t think add a route rule here is necessarily, but anyway, it&#8217;s a good time to get the first impression of what this can do. which we will make the best use of it in next Solution.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>The Ultimate And More Fast Solution</h3>
+
+<ul>
+<li><p>   As you may think, why we still didn&#8217;t use Fast-Internet-2 yet. Now, it&#8217;s time to rolling on this connection! Let the MacBook and only MacBook use this connection.</p>
+
+<ul>
+<li><p> In fact, this is a kinda complicated process, we need to do the following stuffs to put it all together to work properly.</p>
+
+<p> 1 . Leave MacBook&#8217;s default (192.168.1.1) untouched.</p>
+
+<p> 2 . Let the Route know, if a packet is come from MacBook(192.168.1.169), sets the <strong>Gateway</strong> of this connection to 1123.150.232.1 and <strong>Outgoing Interface</strong> to ppp0. because at this point, only ppp0 can connect to it&#8217;s <strong>Gateway</strong>(123.150.232.1)</p>
+
+<ul>
+<li>  <strong>policy routing</strong> is the first magic.
+
+<ul>
+<li>as most of us might already knew that, the linux kernel only allow exactly one <strong>efficient default</strong> in <strong>route table</strong>.</li>
+<li>so this needs is beyond a simple <code>route</code> command can do. but, don&#8217;t worry. net-tools is out of date for so long, let us introduce the new <code>ip</code> tools to do this for us.</li>
+<li>basically, this is still maintain that one kernel default route in route table, but, it allow us to add custom route table based on our needs, and set up the right condition. e.g <strong>the packet&#8217;s source address/net</strong> or <strong>the incoming interface</strong>, etc see <code>ip route help</code>.
+
+<ul>
+<li><p>the steps to make this happened are:</p>
+
+<pre><code># add a table id and table name to the route table database, just make sure they are unique.
+echo '7375 sunusroute' &gt;&gt; /etc/iproute2/rt_tables
+# check if that succeeded, the out should be empty.
+ip route show table sunusroute
+# then, add route rules to this newly create table.
+# set the default route/gateway of this table
+ip route add default via 123.150.232.1 dev ppp0
+# finally, add a rule to tell the kernel, under what circumstance,
+the packet should use the route table from what we just set,
+instead of the default route rules. we just set this simple rule, if a packet is from 192.168.1.169, then apply the rules in route table sunusroute.
+ip rule add from 192.168.1.169 table sunusroute
+</code></pre></li>
+<li><p>check if those are valid by:</p>
+
+<pre><code>ip rule show
+&gt;&gt; 0: from all lookup local
+&gt;&gt; 32761: from 192.168.1.169 lookup sunusroute
+&gt;&gt; many-more-lines-of-other-rules
+ip route show table sunusroute
+&gt;&gt; default via 123.150.108.1 dev ppp0
+ip route flush cache
+</code></pre></li>
+<li><p>the last command <code>ip route flush cache</code> is just a precaution, in case the old rules in cache might do something nasty.</p></li>
+<li><p>we are done in this step.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p> 3 . Also, Since the Route&#8217;s default gateway isn&#8217;t 123.150.232.1, so it&#8217;s a must to set packet&#8217;s <strong>source address</strong> to 123.150.232.74. so here we will do a <strong>SNAT</strong> magic.</p>
+
+<ul>
+<li><p>we are officially meet the iptables here, the firewall of the linux, a great tool for many other usages as well.</p>
+
+<ul>
+<li>the iptables consists by some tables, and those tables has some chains. the packet need to go all the way from the very first chain to the very last one. so that this packet can be send/receive correctly. during the packet&#8217;s travel in those tables and chains, it might be modify, accept, drop or reject, we can even add marks to those packets so that we can debug them.</li>
+<li>here is a brief image of how a packets goes.</li>
+</ul>
+
+
+<p><img src="/images/iptables_traverse.jpg" title="iptables_traverse" alt="alt text" /></p>
+
+<ul>
+<li>obviously, what we want the route to do is:</li>
+</ul>
+
+
+<p><strong>forward the packets from 192.168.1.169 to interface ppp0 with the right gateway 123.150.231.1</strong></p>
+
+<ul>
+<li><p>follow the diagram, the packets should go through the tables and chains in the order of</p>
+
+<ol>
+<li>[packet come in from ppp0]</li>
+<li>[raw-PREROUTING]</li>
+<li>[mangle-PREROUTING]</li>
+<li>[filter-PREROUTING]</li>
+<li>[ROUTING-DESICION]</li>
+<li>[mangle-FORWARD]</li>
+<li>[filter-FORWARD]</li>
+<li>[ROUTING-DESICION]</li>
+<li>[mangle-POSTROUTING]</li>
+<li>[nat-POSTROUTING]</li>
+<li>[packet come out from ppp0]</li>
+</ol>
+</li>
+<li><p>I once not sure/doubt about what those <strong>ROUTING-DESICION</strong> do, after my research, i think it&#8217;s just decide what <strong>route</strong> to use, basically, it just look up the routing table and get a <strong>route</strong> to use.</p></li>
+<li><p>so, what we need to do is, change the packets&#8217;s source address right after the packet go off. that is, in the step ten.</p>
+
+<p> <code>iptables -t nat -o ppp0 -j SNAT --to-address 123.150.232.74</code></p></li>
+</ul>
+</li>
+</ul>
+
+
+<p> 4 . We&#8217;re pretty much done here:)</p>
+
+<p> 5 . Enjoy!</p></li>
+</ul>
+</li>
+</ul>
+
+
+<h2>More useful resources.</h2>
+
+<h3>i read a lot of them to make this work, i think you should do that, too. if you want to fully utilize your network.</h3>
+
+<ol>
+<li><p>the <strong>iptable-tutorial</strong></p>
+
+<ul>
+<li><a href="http://www.frozentux.net/documents/iptables-tutorial">http://www.frozentux.net/documents/iptables-tutorial/</a>
+
+<ul>
+<li>pretty much every chapter is worthing reading :)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>the awesome and notable <strong>Linux Advanced Routing &amp; Traffic Control</strong>, aka &#8216;lartc&#8217;</p>
+
+<ul>
+<li><a href="http://lartc.org">http://lartc.org</a>
+
+<ul>
+<li>especially chapter 4 and 11 are much involved in this post.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>much more</strong> you will find in those two above.</p></li>
+<li><p>1,2 also have Chinese version, thank for those guy who do the translation work!</p></li>
+</ol>
+
+
+<h2>PS</h2>
+
+<h3>since i now got kinda <em>experience</em> of doing those stuffs, you are welcome to leave a message or just email me about what you think or what you want to do. i will try to help you if i can.</h3>
+
+<h3>ANY questions and discussion are welcomed, too.</h3>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2013
+
+    sunus
+
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'sunusblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/';
+        var disqus_url = 'http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+		</div>
+	</div>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project=7653790; 
+        var sc_invisible=1; 
+        var sc_security="bd47e345"; 
+    </script>
+    <script type="text/javascript"
+        src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript><div class="statcounter"><a title="web counter"
+                href="http://statcounter.com/free-hit-counter/"
+                target="_blank"><img class="statcounter"
+                src="http://c.statcounter.com/7653790/0/bd47e345/1/"
+                alt="web counter"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>
