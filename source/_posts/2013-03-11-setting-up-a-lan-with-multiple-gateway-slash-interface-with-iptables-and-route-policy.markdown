@@ -31,7 +31,7 @@ The environment i have is like this below:
 			| Route, Running Linux   |
 			| br-lan: 192.168.1.1    | [br-lan]      ------------------------
 			| ppp0:   123.150.232.74 | --------------| Other Machines in Lan|
-			| eth0.2: 10.10.149.4    |               |-----------------------
+			| eth0.2: 10.10.149.4    |               ------------------------
 			--------------------------
 			|                        |
 	[br-lan]|                        |[br-lan]
