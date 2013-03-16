@@ -207,7 +207,7 @@ The environment i have is like this below:
 
 1. the **iptable-tutorial** 
    * [http://www.frozentux.net/documents/iptables-tutorial/](http://www.frozentux.net/documents/iptables-tutorial)
-     * pretty much every chapter is worthing reading :)
+     * pretty much every chapter is worthy reading :)
      
 2. the awesome and notable **Linux Advanced Routing & Traffic Control**, aka 'lartc' 
    * [http://lartc.org](http://lartc.org)
