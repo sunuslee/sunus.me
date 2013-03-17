@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux"
-date: 2013-03-17 22:09
+title: "Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux[1/2]"
+date: 2013-03-16 22:09
 comments: true
 root: "../"
 categories: 
 ---
 
-## Introduction ##
+# Introduction #
 First of all, it all because my MacBookPro's xl2tp utils can not work under my school's networking enviroment. so this is how the post is born.
 
 I have been digging with those stuffs for almost a week, and now, finally i get it rolling and it seems awesome. this post will talks about netfilter known as iptables and ip route policy. and some technic/tool like tcpdump will be involved as well.
 
-## Environment ##
+# Environment #
 
 The environment i have is like this below:
 
@@ -72,7 +72,7 @@ The environment i have is like this below:
 *  So, we can say eth0.2 and two ppp0 are all outgoing Interfaces.
 
 
-## Solutions ##
+# Solutions #
 
   *    I repeat what i want to accomplished here:
        
@@ -89,7 +89,7 @@ The environment i have is like this below:
 
        2 .    Because there is other machines in the lan, so we can not set 123.150.232.1 as **default route** for Route, just like the ArchLinux. there is only ** me ** can access the Fast Internet-2.( The **Benefit** of being me or with me :) lol! )
        
-### The Slow Solution ###
+## The Slow Solution ##
    
   *    Making the MacBook can connect to the internet, but it just too slow for me. Just set up machines and route like the diagram above, it will result this:
        
@@ -97,7 +97,7 @@ The environment i have is like this below:
    
        2 .  the MacBookPro using Slow-Internet-1
        
-### The A Little Bit Faster Solution ###
+## The A Little Bit Faster Solution ##
   
   *    Making the MacBook Using ArchLinux's Internet-3 and the ArchLinux still keep unchanged in Slow Solution. This solution requires those steps.
        
@@ -125,7 +125,7 @@ The environment i have is like this below:
            
            * In fact, i don't think add a route rule here is necessarily, but anyway, it's a good time to get the first impression of what this can do. which we will make the best use of it in next Solution.
            
-### The Ultimate And More Fast Solution ###
+## The Ultimate And More Fast Solution, so far ##
   *    As you may think, why we still didn't use Fast-Internet-2 yet. Now, it's time to rolling on this connection! Let the MacBook and only MacBook use this connection.
   
        * In fact, this is a kinda complicated process, we need to do the following stuffs to put it all together to work properly.
@@ -172,7 +172,7 @@ The environment i have is like this below:
            * the iptables consists by some tables, and those tables has some chains. the packet need to go all the way from the very first chain to the very last one. so that this packet can be send/receive correctly. during the packet's travel in those tables and chains, it might be modify, accept, drop or reject, we can even add marks to those packets so that we can debug them.
            * here is a brief image of how a packets goes.
              
-           ![alt text](/images/iptables_traverse.jpg "iptables_traverse")
+           ![iptables packetes traversal path](/images/iptables_traverse.jpg "iptables_traverse")
                  
            * obviously, what we want the route to do is:
            
@@ -202,8 +202,8 @@ The environment i have is like this below:
          
          5 . Enjoy!
  
-## More useful resources.
-###i read a lot of them to make this work, i think you should do that, too. if you want to fully utilize your network. 
+# More useful resources.
+##i read a lot of them to make this work, i think you should do that, too. if you **relly** want to fully utilize your network. 
 
 1. the **iptable-tutorial** 
    * [http://www.frozentux.net/documents/iptables-tutorial/](http://www.frozentux.net/documents/iptables-tutorial)
@@ -216,7 +216,7 @@ The environment i have is like this below:
 
 4. 1,2 also have Chinese version, thank for those guy who do the translation work!
 
-## PS
-### since i now got kinda *experience* of doing those stuffs, you are welcome to leave a message or just email me about what you think or what you want to do. i will try to help you if i can.
+# PS
+## since i now got kinda *experience* of doing those stuffs, you are welcome to leave a message or just email me about what you think or what you want to do. i will try to help you if i can.
 
-### ANY questions and discussion are welcomed, too.
+## ANY questions and discussion are welcomed, too.

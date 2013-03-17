@@ -1,0 +1,332 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux[2/2] - What happens here, stays in here.</title>
+	<meta name="author" content="sunus">
+
+	
+	<meta name="description" content="The Script of ArchLinux in solution Two (setArch.sh) download 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+#!/bin/ &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="What happens here, stays in here." type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<img src="/images/icon.png" alt="Profile Picture" style="width: 160px;">
+</div>
+<h1><a href="/">What happens here, stays in here.</a></h1>
+<p class="subtitle">I am sunus, A quite normal guy happened to know something about programming. Now, I am trying hard to be a someone that deserve you.</p>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/sunuslee" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/sunuslee" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Setting Up a LAN With Multiple Gateway/interface With Iptables and Route Policy Under Awesome Linux[2/2]</h1>
+	<div class="entry-content"><h1>The Script of ArchLinux in solution Two</h1>
+
+<figure class='code'><figcaption><span> (setArch.sh)</span> <a href='/downloads/code/setArch.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="sb">`</span>whoami<span class="sb">`</span> !<span class="o">=</span> <span class="s1">&#39;root&#39;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;need root!&quot;</span>
+</span><span class='line'>    <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Change this to your interface name, could it be eth* or p*p*.</span>
+</span><span class='line'><span class="nv">IFACE</span><span class="o">=</span><span class="s2">&quot;wlp4s0&quot;</span>
+</span><span class='line'><span class="c"># Change this to your route addr.</span>
+</span><span class='line'><span class="nv">ROUTE</span><span class="o">=</span><span class="s2">&quot;192.168.1.1&quot;</span>
+</span><span class='line'><span class="c"># Change this to your vpn **Server addr**</span>
+</span><span class='line'><span class="nv">VPNHOST</span><span class="o">=</span><span class="s2">&quot;221.239.126.9&quot;</span>
+</span><span class='line'><span class="nv">VPNADDR</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -P -o <span class="s1">&#39;(?&lt;=inet )[0-9.]*&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">VPNROUTE</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -P -o <span class="s1">&#39;(?&lt;=destination )[0-9.]*&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ADDR:&quot;</span><span class="nv">$VPNADDR</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;ip route add $VPNHOST via $ROUTE dev $IFACE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;route add default gw $VPNROUTE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;route del default gw $ROUTE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="c"># The net is the route&#39;s subnet. be careful.</span>
+</span><span class='line'>route add -net 192.168.1.0/24 gw 192.168.1.1
+</span><span class='line'><span class="nb">echo</span> -e <span class="s1">&#39;nameserver 8.8.8.8\nsearch 8.8.4.4&#39;</span> &gt; /etc/resolv.conf
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>The Script of Route in final solution</h1>
+
+<ul>
+<li>see the <strong>Working iptables rules</strong> at here:
+
+<ul>
+<li><a href="https://gist.github.com/sunuslee/5179422">https://gist.github.com/sunuslee/5179422</a></li>
+<li>you probobly need to modify this file a little bit, or just create your own with <code>iptables-save &gt; filename</code></li>
+<li>make sure you have <strong>PPP0-IP</strong> in that file. because this script will replace <strong>PPP0-IP</strong> with the real <strong>PPP0-IP</strong> address.</li>
+<li>you need to put the file working-iptables-rules along with setroute.sh, in the same directory.</li>
+<li>if you are interested, those lines contain |sunus-a/b/c/d| are the Log, demonstration of how the packets went through all the way from one end to another.</li>
+<li>this may have <strong>bugs</strong>, most likely.</li>
+</ul>
+</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Setting the route (setroute.sh)</span> <a href='/downloads/code/setroute.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nv">SUNUS_IP</span><span class="o">=</span><span class="s1">&#39;192.168.1.169&#39;</span>
+</span><span class='line'><span class="nv">VPN_ROUTE</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -o <span class="s1">&#39;P-t-P:[0-9.]*&#39;</span>|tr -d <span class="s1">&#39;P-t-P:&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">VPN_IP</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -o <span class="s1">&#39;addr:[0-9.]*&#39;</span>|tr -d <span class="s1">&#39;addr:&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">TMP_RULES_FILE</span><span class="o">=</span><span class="s1">&#39;/tmp/TRF&#39;</span>
+</span><span class='line'><span class="nv">ROUTE_TABLE</span><span class="o">=</span><span class="s1">&#39;sunusroute&#39;</span>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$VPN_ROUTE&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> -o <span class="s2">&quot;$VPN_IP&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;No VPN-Connection&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;Make sure your xl2tp is working&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>  <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'>sed <span class="s2">&quot;s/PPP0-IP/$VPN_IP/&quot;</span> working-iptables-rule &gt; <span class="nv">$TMP_RULES_FILE</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ROUTE:&quot;</span><span class="nv">$VPN_ROUTE</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ADDR:&quot;</span><span class="nv">$VPN_IP</span>
+</span><span class='line'>
+</span><span class='line'>ip route add default via <span class="nv">$VPN_ROUTE</span> dev ppp0 table <span class="nv">$ROUTE_TABLE</span>
+</span><span class='line'>ip rule add from <span class="nv">$SUNUS_IP</span> table <span class="nv">$ROUTE_TABLE</span>
+</span><span class='line'>ip route flush cache
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;setting ip rules and route-policy successfully&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>iptables-restore &lt; <span class="nv">$TMP_RULES_FILE</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;setting iptables successfully&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;NOW SUNUS CAN USING THE VPN CONNECTING!&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2013
+
+    sunus
+
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'sunusblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2/';
+        var disqus_url = 'http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+		</div>
+	</div>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project=7653790; 
+        var sc_invisible=1; 
+        var sc_security="bd47e345"; 
+    </script>
+    <script type="text/javascript"
+        src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript><div class="statcounter"><a title="web counter"
+                href="http://statcounter.com/free-hit-counter/"
+                target="_blank"><img class="statcounter"
+                src="http://c.statcounter.com/7653790/0/bd47e345/1/"
+                alt="web counter"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>

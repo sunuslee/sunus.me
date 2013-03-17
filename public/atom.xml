@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-03-17T03:26:10+08:00</updated>
+  <updated>2013-03-17T11:46:20+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -14,17 +14,183 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux]]></title>
-    <link href="http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/"/>
-    <updated>2013-03-17T22:09:00+08:00</updated>
-    <id>http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy</id>
-    <content type="html"><![CDATA[<h2>Introduction</h2>
+    <title type="html"><![CDATA[Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux[2/2]]]></title>
+    <link href="http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2/"/>
+    <updated>2013-03-17T10:48:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2</id>
+    <content type="html"><![CDATA[<h1>The Script of ArchLinux in solution Two</h1>
+
+<figure class='code'><figcaption><span> (setArch.sh)</span> <a href='http://sunus.me/downloads/code/setArch.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="sb">`</span>whoami<span class="sb">`</span> !<span class="o">=</span> <span class="s1">&#39;root&#39;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;need root!&quot;</span>
+</span><span class='line'>    <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Change this to your interface name, could it be eth* or p*p*.</span>
+</span><span class='line'><span class="nv">IFACE</span><span class="o">=</span><span class="s2">&quot;wlp4s0&quot;</span>
+</span><span class='line'><span class="c"># Change this to your route addr.</span>
+</span><span class='line'><span class="nv">ROUTE</span><span class="o">=</span><span class="s2">&quot;192.168.1.1&quot;</span>
+</span><span class='line'><span class="c"># Change this to your vpn **Server addr**</span>
+</span><span class='line'><span class="nv">VPNHOST</span><span class="o">=</span><span class="s2">&quot;221.239.126.9&quot;</span>
+</span><span class='line'><span class="nv">VPNADDR</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -P -o <span class="s1">&#39;(?&lt;=inet )[0-9.]*&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">VPNROUTE</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -P -o <span class="s1">&#39;(?&lt;=destination )[0-9.]*&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ADDR:&quot;</span><span class="nv">$VPNADDR</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;ip route add $VPNHOST via $ROUTE dev $IFACE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;route add default gw $VPNROUTE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;route del default gw $ROUTE&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span><span class='line'><span class="nv">$cmd</span>
+</span><span class='line'><span class="c"># The net is the route&#39;s subnet. be careful.</span>
+</span><span class='line'>route add -net 192.168.1.0/24 gw 192.168.1.1
+</span><span class='line'><span class="nb">echo</span> -e <span class="s1">&#39;nameserver 8.8.8.8\nsearch 8.8.4.4&#39;</span> &gt; /etc/resolv.conf
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>The Script of Route in final solution</h1>
+
+<ul>
+<li>see the <strong>Working iptables rules</strong> at here:
+
+<ul>
+<li><a href="https://gist.github.com/sunuslee/5179422">https://gist.github.com/sunuslee/5179422</a></li>
+<li>you probobly need to modify this file a little bit, or just create your own with <code>iptables-save &gt; filename</code></li>
+<li>make sure you have <strong>PPP0-IP</strong> in that file. because this script will replace <strong>PPP0-IP</strong> with the real <strong>PPP0-IP</strong> address.</li>
+<li>you need to put the file working-iptables-rules along with setroute.sh, in the same directory.</li>
+<li>if you are interested, those lines contain |sunus-a/b/c/d| are the Log, demonstration of how the packets went through all the way from one end to another.</li>
+<li>this may have <strong>bugs</strong>, most likely.</li>
+</ul>
+</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Setting the route (setroute.sh)</span> <a href='http://sunus.me/downloads/code/setroute.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nv">SUNUS_IP</span><span class="o">=</span><span class="s1">&#39;192.168.1.169&#39;</span>
+</span><span class='line'><span class="nv">VPN_ROUTE</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -o <span class="s1">&#39;P-t-P:[0-9.]*&#39;</span>|tr -d <span class="s1">&#39;P-t-P:&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">VPN_IP</span><span class="o">=</span><span class="sb">`</span>ifconfig ppp0|grep -o <span class="s1">&#39;addr:[0-9.]*&#39;</span>|tr -d <span class="s1">&#39;addr:&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">TMP_RULES_FILE</span><span class="o">=</span><span class="s1">&#39;/tmp/TRF&#39;</span>
+</span><span class='line'><span class="nv">ROUTE_TABLE</span><span class="o">=</span><span class="s1">&#39;sunusroute&#39;</span>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$VPN_ROUTE&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> -o <span class="s2">&quot;$VPN_IP&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;No VPN-Connection&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;Make sure your xl2tp is working&quot;</span>
+</span><span class='line'>  <span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>  <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'>sed <span class="s2">&quot;s/PPP0-IP/$VPN_IP/&quot;</span> working-iptables-rule &gt; <span class="nv">$TMP_RULES_FILE</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ROUTE:&quot;</span><span class="nv">$VPN_ROUTE</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;VPN-ADDR:&quot;</span><span class="nv">$VPN_IP</span>
+</span><span class='line'>
+</span><span class='line'>ip route add default via <span class="nv">$VPN_ROUTE</span> dev ppp0 table <span class="nv">$ROUTE_TABLE</span>
+</span><span class='line'>ip rule add from <span class="nv">$SUNUS_IP</span> table <span class="nv">$ROUTE_TABLE</span>
+</span><span class='line'>ip route flush cache
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;setting ip rules and route-policy successfully&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>iptables-restore &lt; <span class="nv">$TMP_RULES_FILE</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;setting iptables successfully&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;NOW SUNUS CAN USING THE VPN CONNECTING!&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\n*********\n&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up a LAN with multiple gateway/interface with iptables and route policy under awesome Linux[1/2]]]></title>
+    <link href="http://sunus.me/blog/2013/03/16/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/"/>
+    <updated>2013-03-16T22:09:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/03/16/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy</id>
+    <content type="html"><![CDATA[<h1>Introduction</h1>
 
 <p>First of all, it all because my MacBookPro&#8217;s xl2tp utils can not work under my school&#8217;s networking enviroment. so this is how the post is born.</p>
 
 <p>I have been digging with those stuffs for almost a week, and now, finally i get it rolling and it seems awesome. this post will talks about netfilter known as iptables and ip route policy. and some technic/tool like tcpdump will be involved as well.</p>
 
-<h2>Environment</h2>
+<h1>Environment</h1>
 
 <p>The environment i have is like this below:</p>
 
@@ -40,7 +206,7 @@
         | Route, Running Linux   |
         | br-lan: 192.168.1.1    | [br-lan]      ------------------------
         | ppp0:   123.150.232.74 | --------------| Other Machines in Lan|
-        | eth0.2: 10.10.149.4    |               |-----------------------
+        | eth0.2: 10.10.149.4    |               ------------------------
         --------------------------
         |                        |
 [br-lan]|                        |[br-lan]
@@ -82,7 +248,7 @@
 </ul>
 
 
-<h2>Solutions</h2>
+<h1>Solutions</h1>
 
 <ul>
 <li><p>   I repeat what i want to accomplished here:</p>
@@ -102,7 +268,7 @@
 </ul>
 
 
-<h3>The Slow Solution</h3>
+<h2>The Slow Solution</h2>
 
 <ul>
 <li><p>   Making the MacBook can connect to the internet, but it just too slow for me. Just set up machines and route like the diagram above, it will result this:</p>
@@ -113,7 +279,7 @@
 </ul>
 
 
-<h3>The A Little Bit Faster Solution</h3>
+<h2>The A Little Bit Faster Solution</h2>
 
 <ul>
 <li><p>   Making the MacBook Using ArchLinux&#8217;s Internet-3 and the ArchLinux still keep unchanged in Slow Solution. This solution requires those steps.</p>
@@ -146,7 +312,7 @@ ip rule add from 192.168.1.169 table SunusRules
 </ul>
 
 
-<h3>The Ultimate And More Fast Solution</h3>
+<h2>The Ultimate And More Fast Solution, so far</h2>
 
 <ul>
 <li><p>   As you may think, why we still didn&#8217;t use Fast-Internet-2 yet. Now, it&#8217;s time to rolling on this connection! Let the MacBook and only MacBook use this connection.</p>
@@ -211,7 +377,7 @@ ip route flush cache
 </ul>
 
 
-<p><img src="http://sunus.me/images/iptables_traverse.jpg" title="iptables_traverse" alt="alt text" /></p>
+<p><img src="http://sunus.me/images/iptables_traverse.jpg" title="iptables_traverse" alt="iptables packetes traversal path" /></p>
 
 <ul>
 <li>obviously, what we want the route to do is:</li>
@@ -254,9 +420,9 @@ ip route flush cache
 </ul>
 
 
-<h2>More useful resources.</h2>
+<h1>More useful resources.</h1>
 
-<h3>i read a lot of them to make this work, i think you should do that, too. if you want to fully utilize your network.</h3>
+<h2>i read a lot of them to make this work, i think you should do that, too. if you <strong>relly</strong> want to fully utilize your network.</h2>
 
 <ol>
 <li><p>the <strong>iptable-tutorial</strong></p>
@@ -265,7 +431,7 @@ ip route flush cache
 <li><a href="http://www.frozentux.net/documents/iptables-tutorial">http://www.frozentux.net/documents/iptables-tutorial/</a>
 
 <ul>
-<li>pretty much every chapter is worthing reading :)</li>
+<li>pretty much every chapter is worthy reading :)</li>
 </ul>
 </li>
 </ul>
@@ -286,11 +452,11 @@ ip route flush cache
 </ol>
 
 
-<h2>PS</h2>
+<h1>PS</h1>
 
-<h3>since i now got kinda <em>experience</em> of doing those stuffs, you are welcome to leave a message or just email me about what you think or what you want to do. i will try to help you if i can.</h3>
+<h2>since i now got kinda <em>experience</em> of doing those stuffs, you are welcome to leave a message or just email me about what you think or what you want to do. i will try to help you if i can.</h2>
 
-<h3>ANY questions and discussion are welcomed, too.</h3>
+<h2>ANY questions and discussion are welcomed, too.</h2>
 ]]></content>
   </entry>
   
@@ -750,65 +916,6 @@ love u all!! let&#8217;s rock 2012!!</p>
 <p>I think that’s all ! this place sucks.but I still need to find a way out, to somewhere that I truly belonged to. peace, hope my ‘DBCI’ will grow up soon and have a nice day!</p>
 
 <p>and i just had a really nice day with you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What kind of girl that I will ask out on a date]]></title>
-    <link href="http://sunus.me/blog/2011/09/02/what-kind-of-girl-that-i-will-ask-her-out-on-a-date/"/>
-    <updated>2011-09-02T21:56:04+08:00</updated>
-    <id>http://sunus.me/blog/2011/09/02/what-kind-of-girl-that-i-will-ask-her-out-on-a-date</id>
-    <content type="html"><![CDATA[<p>A little tip:</p>
-
-<p>If you are a guy , or you are NOT into me at all, you can just ignore this blog.</p>
-
-<p>yeah, i figure i have to finished this post before i get going..</p>
-
-<p>i said &#8220;i must get a serious girlfriends this semester!&#8221; some time ago to a friend , and i have some requirements for this very special girl.</p>
-
-<p>First of all:</p>
-
-<p>you MUST be gook-looking, i mean you can be cute, be beautiful,be attractive or sexy . that&#8217;s all right . if i ask you out  to a movie or dinner, that means I think she is GOOD-LOOKING to ME!</p>
-
-<p>then, here comes the second stage, i want you to have some of these qualities list below :</p>
-
-<p>(these are the ones that really matter to me, more important than your appearance)</p>
-
-<p>0: don&#8217;t be evil.</p>
-
-<p>1: thoughtful and considerate to others</p>
-
-<p>2: have ability to think independently, have your own opinions</p>
-
-<p>3: have good sense of humor</p>
-
-<p>4: at least have basic computer skill, if you are a coder, programmer-to-be or computer science relevant major , that&#8217;s just great . if you like      writing programs/codes , or research in ALGORITHM, that&#8217;s just AWESOME!!!!!(i really mean it, that&#8217;s what a girl that i longing for days looks like) and i won&#8217;t repair your computer/phones for more than 3 TIMES!</p>
-
-<p>5: love movies or American TV shows like:</p>
-
-<p>[24, The big bang theory,  How i met your mother, Leverage,  It crowds,  Spartacus, Gossip girl and PORNS:D:D!!]</p>
-
-<p>then we may have more topic to chat about.</p>
-
-<p>6: knowing stuffs, like how two people to maintain their relationship, what can do and what can NOT do, that&#8217;s important especially when we</p>
-
-<p>decided to start a relationship.</p>
-
-<p>7: respect people&#8217;s privacy, that mean i will NEVER give out my IM account, Email account, Social Networks account, etc. and i won&#8217;t ask you</p>
-
-<p>for these infos, neither.</p>
-
-<p>8: if you are a Hardcore Counter-Strike player , polo beginner or a programmer/coder , that will SIGNIFICANTLY  increase my impression of you.</p>
-
-<p>9:at lease understand what i wrote above , with or without the help of any kinds of TRANSLATOR. i know there&#8217;s a lot a grammar mistake inside this blog,  if you can point it out, i appreciate it</p>
-
-<p>Lastly, please do keep this in mind:</p>
-
-<p>if i ask you out to a movie or dinner for the FIRST time, it just , just means i think you are good-looking to me, nothing less, nothing more.It takes days to build up a serious relationship.</p>
-
-<p>thanks  for reading this long piece-of-crap-blog-if-you-are-not-into-me lol</p>
-
-<p>have a good day! sweetie!</p>
 ]]></content>
   </entry>
   
