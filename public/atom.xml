@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-03-17T11:46:20+08:00</updated>
+  <updated>2013-03-17T12:17:21+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -18,7 +18,9 @@
     <link href="http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2/"/>
     <updated>2013-03-17T10:48:00+08:00</updated>
     <id>http://sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2</id>
-    <content type="html"><![CDATA[<h1>The Script of ArchLinux in solution Two</h1>
+    <content type="html"><![CDATA[<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Setting Up a LAN With Multiple Gateway/interface With Iptables and Route Policy Under Awesome Linux</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunus.me/blog/2013/03/17/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy-under-awesome-linux-2-slash-2/" property="cc:attributionName" rel="cc:attributionURL">sunus Lee</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
+
+<h1>The Script of ArchLinux in solution Two</h1>
 
 <figure class='code'><figcaption><span> (setArch.sh)</span> <a href='http://sunus.me/downloads/code/setArch.sh'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -184,7 +186,9 @@
     <link href="http://sunus.me/blog/2013/03/16/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/"/>
     <updated>2013-03-16T22:09:00+08:00</updated>
     <id>http://sunus.me/blog/2013/03/16/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy</id>
-    <content type="html"><![CDATA[<h1>Introduction</h1>
+    <content type="html"><![CDATA[<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Setting Up a LAN With Multiple Gateway/interface With Iptables and Route Policy Under Awesome Linux</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunus.me/blog/2013/03/16/setting-up-a-lan-with-multiple-gateway-slash-interface-with-iptables-and-route-policy/" property="cc:attributionName" rel="cc:attributionURL">sunus Lee</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
+
+<h1>Introduction</h1>
 
 <p>First of all, it all because my MacBookPro&#8217;s xl2tp utils can not work under my school&#8217;s networking enviroment. so this is how the post is born.</p>
 
