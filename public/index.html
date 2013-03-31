@@ -7,9 +7,25 @@
 	<meta name="author" content="sunus">
 
 	
-	<meta name="description" content="hi, there.
-yeah, i am gonna turn 0x17 tomorrow, that&#8217;s another whole new year for me and i think i just end my time in 0x16.
-after reading my &hellip;">
+	<meta name="description" content="原标题 装逼遭雷劈。这个2b bug 把我的周末毁了。 (zb.c) download 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#define &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -66,6 +82,87 @@ after reading my &hellip;">
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-31T22:13:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/03/31/ying-yao/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/03/31/ying-yao/">应邀发个以前C语言的小quiz</a></h1>
+	<div class="entry-content">
+		<h3>原标题</h3>
+
+<h2>装逼遭雷劈。这个2b bug 把我的周末毁了。</h2>
+
+<figure class='code'><figcaption><span> (zb.c)</span> <a href='/downloads/code/zb.c'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;string.h&gt;</span>
+</span><span class='line'><span class="cp">#define fo2_bug(ins, outs) _fo2_bug(ins, outs, strlen(ins))</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">_fo2_bug</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">ins</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">outs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="p">(</span><span class="o">!</span><span class="n">ungetc</span><span class="p">(</span><span class="o">*</span><span class="n">ins</span><span class="p">,</span> <span class="n">stdin</span><span class="p">)</span> <span class="o">?</span> <span class="o">:</span> <span class="n">_fo2_bug</span><span class="p">(</span><span class="n">ins</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">outs</span><span class="p">,</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="p">(</span><span class="n">outs</span> <span class="o">+</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">());</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+</span><span class='line'>        <span class="kt">char</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;2b sunus&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">fo2_bug</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">buf</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为ungetc的原因，代码请用gcc编译vc/vs对ungetc的处理不很好。</p>
+
+<p>fo2_bug就是2b的字符串反转函数,把字符串ins反转之后存到outs.在main调用fo2_bug之后。会有点异想不到的事情花生～～</p>
+
+<p>有同学说说fo2_bug这个函数的bug在哪儿，bug的症状是啥，为什么会出现bug&#8230;怎么fix就随便吧，太轻松了～</p>
+
+<p>答对的女同学我请吃饭吧..</p>
+
+<p>男同学，嗯。。送一个月高速PROXY或者迅雷会员吧&#8230;.<sup>^</sup></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -968,51 +1065,6 @@ and finally, i get back to Beijing and post this blog. good night. and hope i ca
 <p>wish me luck !</p>
 
 <p>bye and wish u a happy mid-autunm festival!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-19T21:54:11+08:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2012/08/19/new-chapter-gose-go/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2012/08/19/new-chapter-gose-go/">New Chapter Gose Go :)</a></h1>
-	<div class="entry-content">
-		<p>yeah, after about two months of intern-ship in Beijing, i get back to my sweet home for a couple of days.stay with my family and friends. it&#8217;s  really really happy time spent with them, and my sisters they are doing really really good so i am proud of them :) ps, i bought my mom a new SAMSUNG GALAXY smart phone using my first salary, it did feels great!</p>
-
-<p>and my friends, yeah, i really really want them to  change their names, but i didn&#8217;t get the perfect girl i want , didn&#8217;t bring her to my city then let my friends see how awesome and amazing she is, and how lucky i am if i had a girlfriend like she:) anyway, i still like her a lot even thought i am trying really really hard to meet some new girls and hangout with them, do things we did when we first met, but, they are, they are just NOTHING ON U. and i know now, i can not forget you for sure:( i keep the movie tickets we saw together,  the birthday gifts i wished i could give you by my side,which i know you will like it, but, you never know what that is:( and i also want to finish those drinks on the street, it&#8217;s like one or two more cups, and we can get some free drinks. sorry, i can not remember the exact numbers.</p>
-
-<p>i don&#8217;t even know whether you will read this far or not, i don&#8217;t even know whether you will ever come to this blog or not. but if you do, even if i don&#8217;t know whether you had been there for a while or not, it&#8217;s okay.  if i were you, i saw this blog and i know much this guy likes you. i will be crying:) kidding</p>
-
-<p>and my intern-ship goes very smoothly, the company is growing and i am doing kinda good job there. so not much to talk about.</p>
-
-<p>anyway, new chapter of my life goes on, and you are the only missing part of my new chapter.! hoping you can be in it, some day, maybe, perhaps :)</p>
 
 		
 		

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "应邀发个以前C语言的小quiz"
+date: 2013-03-31 22:13
+comments: true
+categories: 
+---
+
+###原标题
+##装逼遭雷劈。这个2b bug 把我的周末毁了。
+
+{% include_code zb.c %}
+
+因为ungetc的原因，代码请用gcc编译vc/vs对ungetc的处理不很好。
+
+fo2_bug就是2b的字符串反转函数,把字符串ins反转之后存到outs.在main调用fo2_bug之后。会有点异想不到的事情花生～～
+
+有同学说说fo2_bug这个函数的bug在哪儿，bug的症状是啥，为什么会出现bug...怎么fix就随便吧，太轻松了～
+
+答对的女同学我请吃饭吧..
+
+男同学，嗯。。送一个月高速PROXY或者迅雷会员吧....^^

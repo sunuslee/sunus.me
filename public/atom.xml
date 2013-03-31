@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-03-25T22:55:35+08:00</updated>
+  <updated>2013-03-31T22:21:13+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[应邀发个以前C语言的小quiz]]></title>
+    <link href="http://sunus.me/blog/2013/03/31/ying-yao/"/>
+    <updated>2013-03-31T22:13:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/03/31/ying-yao</id>
+    <content type="html"><![CDATA[<h3>原标题</h3>
+
+<h2>装逼遭雷劈。这个2b bug 把我的周末毁了。</h2>
+
+<figure class='code'><figcaption><span> (zb.c)</span> <a href='http://sunus.me/downloads/code/zb.c'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;string.h&gt;</span>
+</span><span class='line'><span class="cp">#define fo2_bug(ins, outs) _fo2_bug(ins, outs, strlen(ins))</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">_fo2_bug</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">ins</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">outs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="p">(</span><span class="o">!</span><span class="n">ungetc</span><span class="p">(</span><span class="o">*</span><span class="n">ins</span><span class="p">,</span> <span class="n">stdin</span><span class="p">)</span> <span class="o">?</span> <span class="o">:</span> <span class="n">_fo2_bug</span><span class="p">(</span><span class="n">ins</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">outs</span><span class="p">,</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="p">(</span><span class="n">outs</span> <span class="o">+</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">());</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+</span><span class='line'>        <span class="kt">char</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;2b sunus&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="n">fo2_bug</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">buf</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为ungetc的原因，代码请用gcc编译vc/vs对ungetc的处理不很好。</p>
+
+<p>fo2_bug就是2b的字符串反转函数,把字符串ins反转之后存到outs.在main调用fo2_bug之后。会有点异想不到的事情花生～～</p>
+
+<p>有同学说说fo2_bug这个函数的bug在哪儿，bug的症状是啥，为什么会出现bug&#8230;怎么fix就随便吧，太轻松了～</p>
+
+<p>答对的女同学我请吃饭吧..</p>
+
+<p>男同学，嗯。。送一个月高速PROXY或者迅雷会员吧&#8230;.<sup>^</sup></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[0x17]]></title>
@@ -909,31 +966,6 @@ love u all!! let&#8217;s rock 2012!!</p>
 <p>2011 , 2011 ; part 1/2 end.</p>
 
 <p>To be continue.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Untitled, just writing what i feel like to write]]></title>
-    <link href="http://sunus.me/blog/2011/12/18/untitled-just-writing-what-i-feel-like-to-write/"/>
-    <updated>2011-12-18T21:43:02+08:00</updated>
-    <id>http://sunus.me/blog/2011/12/18/untitled-just-writing-what-i-feel-like-to-write</id>
-    <content type="html"><![CDATA[<p>um&#8230; kind of feel down today and i just don&#8217;t know why.</p>
-
-<p>lol this semester is about to finish, and i don&#8217;t know if i meet my goal that i had for this semester. no ! i know i am far away meet my goal this semester, i kind of feel frustrated about myself. didn&#8217;t do i write any popular stuffs , btw i mean the &#8216;DBCI&#8217; here, even thought there&#8217;s a few people who like it and found it interesting ,  anyway, i will NOT give up on my first project before i know how far / bigger it will get.  i decided to REFINE during my vacation.</p>
-
-<p>i came up with a great idea several days ago, and i found my partner. so we decide to lunch this project right after we finished our exams. hopefully, my second project will do better. and i think, at least i wanna that stuff, and there is a lot of people out there who can not write codes, will need that too.</p>
-
-<p>i had been put my most attentions on programming and internship lately, besides those stuff i really really had a very great time with a new girl i met here,  and she is the most AWESOME 18-year-old girl i know, even thought she doesn&#8217;t like to go to cinema or play billiards. i don&#8217;t know weather i will find someone else to hang out with when i just wanna see a movie or something when i have chance. i really really don&#8217;t know that either.  oh, by the way, she is gonna learn some C skills to take a exam,  i think i somehow &#8216;encourage&#8217;  her a little bit to do so.  anyway, hope she will find something interesting / beautiful in C , during the learning process.</p>
-
-<p>i talked a lot with my friends lately,  i found that the older i get, the more i needs them and i feel very lucky to have them around, especially right now when i feel down, my best friend , still out there chatting with me, while i am writing this post.</p>
-
-<p>i think i am kinda weird guy, i somehow will think a lot about the girl i hang out with recently, but when we lost touch one day and several days goes by. i might just forget about her and start to looking for new one.</p>
-
-<p>i just don&#8217;t know what i am looking for. Or i just afraid to deal with the fact that i found what i am looking for,BUT i just don&#8217;t know if i deserve this ? i don&#8217;t know..</p>
-
-<p>i wrote so many &#8216;i don&#8217;t know&#8217; in this post, i don&#8217;t know why&#8230;</p>
-
-<p>so, good luck and happy x-mas and new year, it&#8217;s coming soon!</p>
 ]]></content>
   </entry>
   
