@@ -14,7 +14,9 @@ i had been playing multiply roles for some weeks.
   * Since the data on our servers got destroyed by mistake, i have to do that form scratch and got some new problems, mostly because we now work at a new lab with different networking enviroment.  it took some extra work. and also i have to re-write and setup our team wiki pages. i think that wiki is important but some of the guys in the team didn't think that way, fine. now i can say that with confident that i am fully qualified for a **SA** position:)
 
 ### HR guy
-  * All right, it's not that **official**, but i do have some rights at this team right now, and i did have received some resumes and **hire** someone to do stuffs with us, LOL. hoping i hired the right guy. and i am still want people to work with us, see the recruiting ad here: An [PDF version](http://www.sunus.me/downloads/os-recuriting.pdf, 'download os-recuriting.pdf'), [HTML version](http://www.readability.com/articles/6feglmeo)
+  * All right, it's not that **official**, but i do have some rights at this team right now, and i did have received some resumes and **hire** someone to do stuffs with us, LOL. hoping i hired the right guy. and i am still want people to work with us, see the recruiting ad here: 
+    1. [PDF version: http://www.sunus.me/downloads/os-recuriting.pdf](http://www.sunus.me/downloads/os-recuriting.pdf 'download os-recuriting.pdf')
+    2. [HTML version: http://www.readability.com/articles/6feglmeo](http://www.readability.com/articles/6feglmeo)
   * i am waiting, join us soon:)
 
 ### _Talker_
@@ -30,8 +32,8 @@ i had been playing multiply roles for some weeks.
   * i don't like this title, but i did have those title in some document files. since i talked to the guys in the team, i have to think and assigned tasks about we need to do at this point and future as well to them, based on their skills, attitute and motivation. i think i am doing ok, hoping they will do the same:)
 
 ### Developer
-  * yeah, that's what i love most, luckily i found i need some simple but basic feature/service but it didn't exist. so i write a script to get it done and i am using it on a daily basis. of course i open source of this project.
-  * [The Backup-Box](https://github.com/sunuslee/bub) it can sync/backup you files using the services provided by stuffs like dropbox, google drive, amazon cloud but offers a feature that allowed you to select any files on your machine and get it backed up, **you don't have to manually put those files into the directory in the cloud drive**
+  * yeah, that's what i love most, luckily i found i need some simple but basic feature/service but it didn't exist. so i write a script to get it done and i am using it on a daily basis. of course i open source of this project at **[github The Backup-Box](https://github.com/sunuslee/bub)**
+  * [The Backup-Box ](https://github.com/sunuslee/bub) it can sync/backup you files using the services provided by stuffs like dropbox, google drive, amazon cloud but offers a feature that allowed you to select any files on your machine and get it backed up, **you don't have to manually put those files into the directory in the cloud drive**
   * yesterday i found the first version code of hub looks ugly and seems confuse, so i rewrite most of them, it now looks much like my code:)
   * i start to take license seriously, so i chose _MIT Open Source License_ to publish bub. 
 
@@ -43,7 +45,7 @@ i had been playing multiply roles for some weeks.
 ## Some other stuffs
  * i am glad i still stay in the campus and did't want to **quit** again. this is a quit week and i don't really enjoy this kind of busy, it's not what i want. i just want to do **my thing** and get it done perfectly.
  * i don't even got time to swim, but i got time to swim and writing blog today, it feels great. i am making progress in the pool.
- * i watched a great movie called [_waiting alone_](http://movie.douban.com/subject/1308741/) , i found it just like a mirror to me and i just found my **Liu Rong** in my life, or maybe i knew it for quite a while but afraid to admit it? god, i wish i can watch this movie earlier.
+ * i watched a great movie called [_waiting alone_ (**http://movie.douban.com/subject/1308741/**)](http://movie.douban.com/subject/1308741/) , i found it just like a mirror to me and i just found my **Liu Rong** in my life, or maybe i knew it for quite a while but afraid to admit it? god, i wish i can watch this movie earlier.
  * i will watch another great movie _Django Unchained_ this week. i should watch it earlier but just too busy this week, now that i got time, i will watch it.
 
 ## Something is missing ?
