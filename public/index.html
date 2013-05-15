@@ -7,25 +7,7 @@
 	<meta name="author" content="sunus">
 
 	
-	<meta name="description" content="原标题 装逼遭雷劈。这个2b bug 把我的周末毁了。 (zb.c) download 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#define &hellip;">
+	<meta name="description" content="Introduction We got a problem with the networking in my dorm and laboratory, if outgoing traffic port is 3389, the connection will be banned. so, we &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -84,6 +66,223 @@
 				<div id="content" class="inner"><script src="/javascripts/jquery.bpopup.min.js" type="text/javascript"> </script>
 <script src="/javascripts/antiWindows.js" type="text/javascript"> </script>
 
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-15T22:35:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/05/15/port-mapping-slash-forwarding-with-iptables-in-linux/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/05/15/port-mapping-slash-forwarding-with-iptables-in-linux/">Port Mapping/forwarding With IPTABLES in Linux</a></h1>
+	<div class="entry-content">
+		<h1>Introduction</h1>
+
+<p>We got a problem with the networking in my dorm and laboratory, if outgoing traffic port is 3389, the connection will be banned. so, we need to figure a way out to connect a Windows server&#8217;s 3389 port, which is suck, i mean, Windows sucks.</p>
+
+<h1>Solution</h1>
+
+<p>I connected to one of the linux server which is in the same lan with Suck Windows Server with port, let&#8217;s say 63389. the the linux with redirect the connection from 63389 to Suck Windows Server&#8217;s port 3389.</p>
+
+<p>this is what i did in the linux server:</p>
+
+<pre><code>    iptables -t nat -I PREROUTING 1 -p tcp -i eth0 --dport 63389 -j DNAT --to-destination SUCK-WIN-IP:3389
+    iptables -t nat -A POSTROUTING -p tcp --dport 3389 -j MASQUERADE
+</code></pre>
+
+<h2>Note</h2>
+
+<p>the second target <strong> MASQUERADE </strong> is a really handy thing, it will be acting like SNAT most times, but it can also auto-adjust some connection problems with extra <strong>COST</strong></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-11T23:20:00+08:00" pubdate data-updated="true">May 11<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/05/11/moving-on/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/05/11/moving-on/">Moving On</a></h1>
+	<div class="entry-content">
+		<h1>Summary for the past</h1>
+
+<ol>
+<li><p>the &#8220;thing&#8221; i do in school, still making very slow progress, some of the guys starting contribute to the group, i am glad to see that.</p></li>
+<li><p>i made a small web app called find-the-one for guokr group&#8217;s searching. it works fine, i learn some new technic and it might be helpful in the future.</p>
+
+<ul>
+<li>the very first redone of i made that is because I was trying to find if there&#8217;s any girl i might found interesting in tianjin. so i wrote that app, it seems that my hope <strong>didn&#8217;t come true.</strong></li>
+<li>but, there is quite amount of people like that app and using it. so, i am glad i can make another stuff people like.</li>
+<li>that app is in the Guokr.com&#8217;s homepage :) it got about 1000pv in it&#8217;s first day.</li>
+</ul>
+</li>
+</ol>
+
+
+<h1>Some other stuff</h1>
+
+<p>  basically, i write this just want to say， i am trying so hard to moving on, and i think somehow, it might work :)</p>
+
+<p>  And there&#8217;s another interesting story, there&#8217;s a front desk girl i ‘kinda’ like from the company that gave me the very first job offer but i didn&#8217;t accept in the end. she saw my WeiBo about IronMan3, and we talk about the comment &#8216;haha hahaha hahahaha&#8217; i gave to that movie, i went great and i found her interesting too, and she like&#8217;s billiard too. so, I might have chance to see her again, but not interview involved this time! good luck.</p>
+
+<p>  One last thing, i am gonna to re-watch the An <a href="http://movie.douban.com/subject/1866479/" title="The Avengers">The Avengers</a> again, since i just finished the IronMan 3 a few days ago.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-21T00:02:00+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/04/21/i-dont-like-this-busy-week/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/04/21/i-dont-like-this-busy-week/">I Don&#8217;t Like This Busy Week, but I Made It Through. So Far</a></h1>
+	<div class="entry-content">
+		<p>hi, it&#8217;s been a while:) i just had some busy weeks and finally, i think i can take a break now. i can spend more time with friends and my personal work, plus some go on dates, if i am <strong>luckily</strong> enough.</p>
+
+<p>i had been playing multiply roles for some weeks.</p>
+
+<h3>System Administrator</h3>
+
+<ul>
+<li>Since the data on our servers got destroyed by mistake, i have to do that form scratch and got some new problems, mostly because we now work at a new lab with different networking enviroment.  it took some extra work. and also i have to re-write and setup our team wiki pages. i think that wiki is important but some of the guys in the team didn&#8217;t think that way, fine. now i can say that with confident that i am fully qualified for a <strong>SA</strong> position:)</li>
+</ul>
+
+
+<h3>HR guy</h3>
+
+<ul>
+<li>All right, it&#8217;s not that <strong>official</strong>, but i do have some rights at this team right now, and i did have received some resumes and <strong>hire</strong> someone to do stuffs with us, LOL. hoping i hired the right guy. and i am still want people to work with us, see the recruiting ad here:
+
+<ol>
+<li><a href="http://www.sunus.me/downloads/os-recuriting.pdf" title="download os-recuriting.pdf">PDF version: http://www.sunus.me/downloads/os-recuriting.pdf</a></li>
+<li><a href="http://www.readability.com/articles/6feglmeo">HTML version: http://www.readability.com/articles/6feglmeo</a></li>
+</ol>
+</li>
+<li>i am waiting, join us soon:)</li>
+</ul>
+
+
+<h3><em>Talker</em></h3>
+
+<ul>
+<li>I don&#8217;t know what the fuck the <em>talker</em> is ? but i can explain what that is, i talked with some of the main members our this team, asked their thougths on this <strong>thing</strong> we are doing right now, what&#8217;re they thinking and what they want to do next. and their answer is just, let&#8217;s say, simple.</li>
+<li>I used to have pretty high admire on them, and i used to think i can count on them. but right now, i think i have to re-consider those thoughts. obviously they have other pressing matters right now, i have no comment on this and i have no right to judge them. but, i have mine too, and it&#8217;s the main reason why i came back this year. it&#8217;s definitely <strong>NOT</strong> what we do right now. if you don&#8217;t have motivation or this s not interested to you any more, you can quit. because at this point, i just find out every one right now are replaceable, i can not see the quality/ability we need in you right now, but, i once think you have those.</li>
+</ul>
+
+
+<h3>Secretary</h3>
+
+<ul>
+<li>Yes, secretary. I wrote a lot those days and i knew what i know my writing skills sucks. glad i have some guy to help me. final, i finished those crap, I can not believe some parts of those paper are written by me.</li>
+<li>besides writing papers, I went around, hand in papers to different people, get their signature. even printed the paper.</li>
+<li>A teacher call me everyday around 9 am to wake up and go to he office, to write.</li>
+</ul>
+
+
+<h3>Team Leader</h3>
+
+<ul>
+<li>i don&#8217;t like this title, but i did have those title in some document files. since i talked to the guys in the team, i have to think and assigned tasks about we need to do at this point and future as well to them, based on their skills, attitute and motivation. i think i am doing ok, hoping they will do the same:)</li>
+</ul>
+
+
+<h3>Developer</h3>
+
+<ul>
+<li>yeah, that&#8217;s what i love most, luckily i found i need some simple but basic feature/service but it didn&#8217;t exist. so i write a script to get it done and i am using it on a daily basis. of course i open source of this project at <strong><a href="https://github.com/sunuslee/bub">github The Backup-Box</a></strong></li>
+<li><a href="https://github.com/sunuslee/bub">The Backup-Box </a> it can sync/backup you files using the services provided by stuffs like dropbox, google drive, amazon cloud but offers a feature that allowed you to select any files on your machine and get it backed up, <strong>you don&#8217;t have to manually put those files into the directory in the cloud drive</strong></li>
+<li>yesterday i found the first version code of hub looks ugly and seems confuse, so i rewrite most of them, it now looks much like my code:)</li>
+<li>i start to take license seriously, so i chose <em>MIT Open Source License</em> to publish bub.</li>
+</ul>
+
+
+<h3>Student</h3>
+
+<ul>
+<li>i went to a Linux class in school, but i ran off in less than ten minutes.because i don&#8217;t find any nice girl in the classroom.</li>
+<li>kidding, i got other stuff to take care of at that time.</li>
+<li>kidding, again. if there is nice girl in the classroom, that &#8216;other stuff&#8217; can certainly wait another hour:)</li>
+</ul>
+
+
+<h2>Some other stuffs</h2>
+
+<ul>
+<li>i am glad i still stay in the campus and did&#8217;t want to <strong>quit</strong> again. this is a quit week and i don&#8217;t really enjoy this kind of busy, it&#8217;s not what i want. i just want to do <strong>my thing</strong> and get it done perfectly.</li>
+<li>i don&#8217;t even got time to swim, but i got time to swim and writing blog today, it feels great. i am making progress in the pool.</li>
+<li>i watched a great movie called <a href="http://movie.douban.com/subject/1308741/"><em>waiting alone</em> (<strong>http://movie.douban.com/subject/1308741/</strong>)</a> , i found it just like a mirror to me and i just found my <strong>Liu Rong</strong> in my life, or maybe i knew it for quite a while but afraid to admit it? god, i wish i can watch this movie earlier.</li>
+<li>i will watch another great movie <em>Django Unchained</em> this week. i should watch it earlier but just too busy this week, now that i got time, i will watch it.</li>
+</ul>
+
+
+<h2>Something is missing ?</h2>
+
+<p>nope:)
+good night and wish me luck.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -902,171 +1101,6 @@ And i will definitely take that offer if i got it six month ago, i wanted to wri
 <p>just enjoy this brand new blog:)</p>
 
 <p>BTW, I am having great fun at Tianjin now.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T09:52:02+08:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2012/12/02/you-are-the-source-of-my-source/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2012/12/02/you-are-the-source-of-my-source/">You Are the Source of My Source.</a></h1>
-	<div class="entry-content">
-		<p>hi you, sorry i recently had so much stuffs want to write, but i again again to tell myself, you have gotta learn the iptables first, then move this blog with the domain to a new place, then write. but, i just found out it doesn&#8217;t really have much to do with the iptables, it&#8217;s apache that do the job. so, i give myself sometime to set up the apache, meanwhile, write those post while i still can remember things:)</p>
-
-<p>first of all, i had great fun at Dec 11, knows as 11.11. i hung out with a very close friend, and we had great meal and watched the moveie The Bourne Legacy, even thought i watched this movie before, but, it&#8217;s okay to watch it again, when you have someone to keep you company:) i knew she had some difficult time with study and the other stuffs, but, anyway. Since we both knew the 11.11 means nothing to us, it just make this day much easier. i had the girl i care about and she had a boyfriend she love very much:) so, i think i am not the ones who got a reason to celebrity that day, because i am FALLING IN LOVE with someone, and i think now everyone knows that. but anway, who needs another friends when you had a friend like she, it just make my life easier, at least when i felt down, she&#8217;s always the one i can talk to. and she understand me more than any of my friends do.</p>
-
-<p>then, back to a another topic. i can not focus on coding recently, lucky enough, i got Taylor Swift&#8217;s songs and coffee, but, i just miss her more and more, she is such  a awesome girl and i never met a girl like her before. and all of a suddenly, when i walk on the road to eat, i came up with this one:</p>
-
-<p>&#8220;she is the source of my source, sorry about the bugs, blame her!&#8221;</p>
-
-<p>i even post a question on Quora, to see and share with other programmers who feel the same way:</p>
-
-<p><a href="http://www.quora.com/Programmers/Are-there-any-romantic-programming-programmer-quotes">http://www.quora.com/Programmers/Are-there-any-romantic-programming-programmer-quotes</a></p>
-
-<p>i really really wish i can spend more that with her, when i had chance, to tell her how i felt about her, face to face.</p>
-
-<p>and another topic, about her, again,(why always her!!) now, i just can not figure out what is REALLY going on, so, wish me luck.</p>
-
-<p>i watch a short video &#8220;The Last&#8221;</p>
-
-<p><a href="http://v.youku.com/v_show/id_XNDc3NTg4MjAw.html">http://v.youku.com/v_show/id_XNDc3NTg4MjAw.html</a></p>
-
-<p>it&#8217;s about a guy&#8217;s view on his previous girlfriends and i somehow, want to write one too, even though, i am still alone now.</p>
-
-<p>my version is about some programming language i know and how i felt about them, but trust me, in fact, it&#8217;s</p>
-
-<p>not about programming language, it&#8217;s about her and some other girls:)</p>
-
-<p>the last is about some options i got and i can not decided which one to choose yet. it really kills me, so, i will let</p>
-
-<p>you know when i make the final decision:)</p>
-
-<p>good night:)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-01T09:13:23+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2012/11/01/270/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2012/11/01/270/">You Made the CRAPLAND a Better Place</a></h1>
-	<div class="entry-content">
-		<p>Hi, I just got back from Tianjin and had some great meat with my friends from my dev team. I&#8217;d been in school like in five days or so, it&#8217;s strange I didn&#8217;t call it crapland :( and here is why I don&#8217;t call it crapland:
-First of all, finally, after about half years long waiting, I got a chance to meet Vivian again, yeah, because I really can not come up with any new words to describe her, but, I am lucky enough to see her again. so  thrilled I got the last night before  head off, I just could not sleep and get up very early then just begin to run, Ok, that&#8217;s a little fake:( I didn&#8217;t run. Then, the funny thing is when I just get out of my apartment, I got a feeling like, someone&#8217;s  Dear PERIOD is about to come, and It turned out I was right, The one, the girl I&#8217;ve been miss for so long, got her PERIOD to visit, just one or more hours  ahead of me to see her. so, I wait one more extra day to spend with my friends. that&#8217;s the my 1st day in Tianjin.(Saturday).</p>
-
-<p>Sunday, it&#8217;s absolutely the highlight of this short visit. When I just woke up, seeing my phone got a new  text, somehow I just feel, (AGAIN, how amazing is that?!) it&#8217;s none other than the girl I dream about, finally, gave me a chance to meet her again, just like the old days. Then I had the best three hours of this visit.she showed me some of her designs, even though I am not a fashion guy at all:) but I can tell, she love her works, just like I love my code:) and we went to the drinking shop we used to visit a lot, then, went back to school because she&#8217;s got class to take. also, just like the old days.</p>
-
-<p>P.S.: The only program I wrote those days is the one I call &#8220;wesaid&#8221; in my phone, i wrote this on the first day of this short trip, the night before i meet  you., I use &#8220;wesaid&#8221; to remind me what we said in the last years, on the exact same day. this program intent to be UN-expandable, meaning this is for one phone number and one phone number only, and i won&#8217;t use this on other girls, i promise:) it&#8217;s too dangerous.</p>
-
-<p>and the next a few days was kinda interesting, too. in fact, I know &#8220;MISS Hot Heart Classmate&#8221; for  about a year, we met, passed by for so many times, which leads me became more and more interested about her, and want to get to know her better, Luckily, I ask her out at a &#8220;Perfect Right time&#8221;, her  class was kinda late, she&#8217;s kinda hungry and she loves the hot pot. So, we had a night of hot pot, and we talk a lot, definitely more friendly, interesting more those new-just-get-to-know-couples.  it&#8217;s like a date but I think we both agree that&#8217;s not a date, still, it&#8217;s fun to finally get to know her,  and her didn&#8217;t disappoint me at all, she&#8217;s interested with beautiful smile, and got talent for telling/creating jokes :>
-but, I doubt she is good at C programming<sup>^</sup>
-and next a few days got little bored but it&#8217;s ok:)
-and finally, i get back to Beijing and post this blog. good night. and hope i can see you guys again, soon:)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-29T09:19:16+08:00" pubdate data-updated="true">Sep 29<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2012/09/29/i-am-feeling-great/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2012/09/29/i-am-feeling-great/">I Am Feeling Great!</a></h1>
-	<div class="entry-content">
-		<p>hi, i am back to write some post again:)</p>
-
-<p>it&#8217;s the 3rd or 4th blog since a started this kinda life at Beijing, and it&#8217;s just, humm, let&#8217;s say it&#8217;s very special times i had. i had some troubles in school, which i really don&#8217;t give it a shit about, and besides, my intern-ship is quite smoothy, or at least i think it that way. our product is about to release at the part that i covered, it looks good to me, even thought that part wasn&#8217;t as mush attractive as kernel and filesystem to me, which i am about to get really deep into those stuffs, but anyway, it&#8217;s gonna end. and i now can really put myself into the field that i love best.</p>
-
-<p>i made some really great friends here, a very lovely girl live across my room, and she can cook for me sometimes, even thought it&#8217;s not that yummy:( and , oh, she&#8217;s a nice and beautiful girl, but, i know we will never hit it off, so, just keep that way and it&#8217;s good. at least i have a good roommate &amp; friends:)</p>
-
-<p>and i also made friends with the guys in our development team, they are really really nice to me, even thought some of them are elder than me, but, yeah, them approved/acknowledge my skills and will let me to help them to solve some problems they had. which i feel kinda proud of myself. good job out there, sunus!</p>
-
-<p>and we hang out a lot, drinking and play polos. it&#8217;s just a lot of fun with them and i think we&#8217;ll become brothers one day;)</p>
-
-<p>and the final, big news, i might get a chance to meet the girl of my dream, again, after she dump me months ago. who knows :(</p>
-
-<p>wish me luck !</p>
-
-<p>bye and wish u a happy mid-autunm festival!</p>
 
 		
 		

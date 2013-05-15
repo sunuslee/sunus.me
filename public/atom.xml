@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-04-02T12:08:17+08:00</updated>
+  <updated>2013-05-15T22:46:57+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -12,6 +12,151 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Port mapping/forwarding with IPTABLES in linux]]></title>
+    <link href="http://sunus.me/blog/2013/05/15/port-mapping-slash-forwarding-with-iptables-in-linux/"/>
+    <updated>2013-05-15T22:35:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/05/15/port-mapping-slash-forwarding-with-iptables-in-linux</id>
+    <content type="html"><![CDATA[<h1>Introduction</h1>
+
+<p>We got a problem with the networking in my dorm and laboratory, if outgoing traffic port is 3389, the connection will be banned. so, we need to figure a way out to connect a Windows server&#8217;s 3389 port, which is suck, i mean, Windows sucks.</p>
+
+<h1>Solution</h1>
+
+<p>I connected to one of the linux server which is in the same lan with Suck Windows Server with port, let&#8217;s say 63389. the the linux with redirect the connection from 63389 to Suck Windows Server&#8217;s port 3389.</p>
+
+<p>this is what i did in the linux server:</p>
+
+<pre><code>    iptables -t nat -I PREROUTING 1 -p tcp -i eth0 --dport 63389 -j DNAT --to-destination SUCK-WIN-IP:3389
+    iptables -t nat -A POSTROUTING -p tcp --dport 3389 -j MASQUERADE
+</code></pre>
+
+<h2>Note</h2>
+
+<p>the second target <strong> MASQUERADE </strong> is a really handy thing, it will be acting like SNAT most times, but it can also auto-adjust some connection problems with extra <strong>COST</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moving On]]></title>
+    <link href="http://sunus.me/blog/2013/05/11/moving-on/"/>
+    <updated>2013-05-11T23:20:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/05/11/moving-on</id>
+    <content type="html"><![CDATA[<h1>Summary for the past</h1>
+
+<ol>
+<li><p>the &#8220;thing&#8221; i do in school, still making very slow progress, some of the guys starting contribute to the group, i am glad to see that.</p></li>
+<li><p>i made a small web app called find-the-one for guokr group&#8217;s searching. it works fine, i learn some new technic and it might be helpful in the future.</p>
+
+<ul>
+<li>the very first redone of i made that is because I was trying to find if there&#8217;s any girl i might found interesting in tianjin. so i wrote that app, it seems that my hope <strong>didn&#8217;t come true.</strong></li>
+<li>but, there is quite amount of people like that app and using it. so, i am glad i can make another stuff people like.</li>
+<li>that app is in the Guokr.com&#8217;s homepage :) it got about 1000pv in it&#8217;s first day.</li>
+</ul>
+</li>
+</ol>
+
+
+<h1>Some other stuff</h1>
+
+<p>  basically, i write this just want to say， i am trying so hard to moving on, and i think somehow, it might work :)</p>
+
+<p>  And there&#8217;s another interesting story, there&#8217;s a front desk girl i ‘kinda’ like from the company that gave me the very first job offer but i didn&#8217;t accept in the end. she saw my WeiBo about IronMan3, and we talk about the comment &#8216;haha hahaha hahahaha&#8217; i gave to that movie, i went great and i found her interesting too, and she like&#8217;s billiard too. so, I might have chance to see her again, but not interview involved this time! good luck.</p>
+
+<p>  One last thing, i am gonna to re-watch the An <a href="http://movie.douban.com/subject/1866479/" title="The Avengers">The Avengers</a> again, since i just finished the IronMan 3 a few days ago.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Don't Like This Busy Week, But I made it through. So Far]]></title>
+    <link href="http://sunus.me/blog/2013/04/21/i-dont-like-this-busy-week/"/>
+    <updated>2013-04-21T00:02:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/04/21/i-dont-like-this-busy-week</id>
+    <content type="html"><![CDATA[<p>hi, it&#8217;s been a while:) i just had some busy weeks and finally, i think i can take a break now. i can spend more time with friends and my personal work, plus some go on dates, if i am <strong>luckily</strong> enough.</p>
+
+<p>i had been playing multiply roles for some weeks.</p>
+
+<h3>System Administrator</h3>
+
+<ul>
+<li>Since the data on our servers got destroyed by mistake, i have to do that form scratch and got some new problems, mostly because we now work at a new lab with different networking enviroment.  it took some extra work. and also i have to re-write and setup our team wiki pages. i think that wiki is important but some of the guys in the team didn&#8217;t think that way, fine. now i can say that with confident that i am fully qualified for a <strong>SA</strong> position:)</li>
+</ul>
+
+
+<h3>HR guy</h3>
+
+<ul>
+<li>All right, it&#8217;s not that <strong>official</strong>, but i do have some rights at this team right now, and i did have received some resumes and <strong>hire</strong> someone to do stuffs with us, LOL. hoping i hired the right guy. and i am still want people to work with us, see the recruiting ad here:
+
+<ol>
+<li><a href="http://www.sunus.me/downloads/os-recuriting.pdf" title="download os-recuriting.pdf">PDF version: http://www.sunus.me/downloads/os-recuriting.pdf</a></li>
+<li><a href="http://www.readability.com/articles/6feglmeo">HTML version: http://www.readability.com/articles/6feglmeo</a></li>
+</ol>
+</li>
+<li>i am waiting, join us soon:)</li>
+</ul>
+
+
+<h3><em>Talker</em></h3>
+
+<ul>
+<li>I don&#8217;t know what the fuck the <em>talker</em> is ? but i can explain what that is, i talked with some of the main members our this team, asked their thougths on this <strong>thing</strong> we are doing right now, what&#8217;re they thinking and what they want to do next. and their answer is just, let&#8217;s say, simple.</li>
+<li>I used to have pretty high admire on them, and i used to think i can count on them. but right now, i think i have to re-consider those thoughts. obviously they have other pressing matters right now, i have no comment on this and i have no right to judge them. but, i have mine too, and it&#8217;s the main reason why i came back this year. it&#8217;s definitely <strong>NOT</strong> what we do right now. if you don&#8217;t have motivation or this s not interested to you any more, you can quit. because at this point, i just find out every one right now are replaceable, i can not see the quality/ability we need in you right now, but, i once think you have those.</li>
+</ul>
+
+
+<h3>Secretary</h3>
+
+<ul>
+<li>Yes, secretary. I wrote a lot those days and i knew what i know my writing skills sucks. glad i have some guy to help me. final, i finished those crap, I can not believe some parts of those paper are written by me.</li>
+<li>besides writing papers, I went around, hand in papers to different people, get their signature. even printed the paper.</li>
+<li>A teacher call me everyday around 9 am to wake up and go to he office, to write.</li>
+</ul>
+
+
+<h3>Team Leader</h3>
+
+<ul>
+<li>i don&#8217;t like this title, but i did have those title in some document files. since i talked to the guys in the team, i have to think and assigned tasks about we need to do at this point and future as well to them, based on their skills, attitute and motivation. i think i am doing ok, hoping they will do the same:)</li>
+</ul>
+
+
+<h3>Developer</h3>
+
+<ul>
+<li>yeah, that&#8217;s what i love most, luckily i found i need some simple but basic feature/service but it didn&#8217;t exist. so i write a script to get it done and i am using it on a daily basis. of course i open source of this project at <strong><a href="https://github.com/sunuslee/bub">github The Backup-Box</a></strong></li>
+<li><a href="https://github.com/sunuslee/bub">The Backup-Box </a> it can sync/backup you files using the services provided by stuffs like dropbox, google drive, amazon cloud but offers a feature that allowed you to select any files on your machine and get it backed up, <strong>you don&#8217;t have to manually put those files into the directory in the cloud drive</strong></li>
+<li>yesterday i found the first version code of hub looks ugly and seems confuse, so i rewrite most of them, it now looks much like my code:)</li>
+<li>i start to take license seriously, so i chose <em>MIT Open Source License</em> to publish bub.</li>
+</ul>
+
+
+<h3>Student</h3>
+
+<ul>
+<li>i went to a Linux class in school, but i ran off in less than ten minutes.because i don&#8217;t find any nice girl in the classroom.</li>
+<li>kidding, i got other stuff to take care of at that time.</li>
+<li>kidding, again. if there is nice girl in the classroom, that &#8216;other stuff&#8217; can certainly wait another hour:)</li>
+</ul>
+
+
+<h2>Some other stuffs</h2>
+
+<ul>
+<li>i am glad i still stay in the campus and did&#8217;t want to <strong>quit</strong> again. this is a quit week and i don&#8217;t really enjoy this kind of busy, it&#8217;s not what i want. i just want to do <strong>my thing</strong> and get it done perfectly.</li>
+<li>i don&#8217;t even got time to swim, but i got time to swim and writing blog today, it feels great. i am making progress in the pool.</li>
+<li>i watched a great movie called <a href="http://movie.douban.com/subject/1308741/"><em>waiting alone</em> (<strong>http://movie.douban.com/subject/1308741/</strong>)</a> , i found it just like a mirror to me and i just found my <strong>Liu Rong</strong> in my life, or maybe i knew it for quite a while but afraid to admit it? god, i wish i can watch this movie earlier.</li>
+<li>i will watch another great movie <em>Django Unchained</em> this week. i should watch it earlier but just too busy this week, now that i got time, i will watch it.</li>
+</ul>
+
+
+<h2>Something is missing ?</h2>
+
+<p>nope:)
+good night and wish me luck.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[应邀发个以前C语言的小quiz]]></title>
@@ -879,93 +1024,6 @@ class opener_with_counter(urllib.FancyURLopener):
     <content type="html"><![CDATA[<p>i had some really really rough days lately and i think i kinda fucked up. i am not sure if i can still believe in what I&#8217;ve believed before.</p>
 
 <p>i have really really high expectation for myself but that seems like going to become less possible , because of so many shit going on around this carpland.but, anyway, life moves on! just get some sleep and hang in there, u can make this happen even if this gets harder.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hello world!]]></title>
-    <link href="http://sunus.me/blog/2012/02/11/hello-world-2/"/>
-    <updated>2012-02-11T03:00:57+08:00</updated>
-    <id>http://sunus.me/blog/2012/02/11/hello-world-2</id>
-    <content type="html"><![CDATA[<p>Now i am officially using this domain,</p>
-
-<p>as u can see:</p>
-
-<p>http://sunus.me</p>
-
-<p>happy new year!</p>
-
-<p>love u all!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2011, 2012; Part 2/2]]></title>
-    <link href="http://sunus.me/blog/2012/01/22/2011-2012-part-22/"/>
-    <updated>2012-01-22T00:27:06+08:00</updated>
-    <id>http://sunus.me/blog/2012/01/22/2011-2012-part-22</id>
-    <content type="html"><![CDATA[<p>humm, first of all, happy Spring Festival to all of you guys!
-Since i posted Part 1/2 of 2011, 2012 some days ago and this thing kept on going on my mind: i still didn&#8217;t finished the second part of that post, so, i will do it now.:)
-i got really really drunk yesterday, wasn&#8217;t i? but anyway, i am very very sober now, so i know now i am using the right words.
-In 2012, i have so many goals to accomplish, i don&#8217;t know if relationship is among them.even if it&#8217;s, i will eventually put it in the last of that list.
-i suddenly found out there are so many things i don&#8217;t know&#8230;.. so, gotta hurry up. and i really really don&#8217;t know what to write right now, because the whole point of writing this one is, this is the second and last part of 2011, 2012 post.and i gotta finished this because the Spring Festival so that i can embrace the future upon me:&lt;
-good night and have fun!
-love u all!! let&#8217;s rock 2012!!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2011, 2012; Part 1/2]]></title>
-    <link href="http://sunus.me/blog/2012/01/02/2011-2012-part-12/"/>
-    <updated>2012-01-02T01:39:42+08:00</updated>
-    <id>http://sunus.me/blog/2012/01/02/2011-2012-part-12</id>
-    <content type="html"><![CDATA[<p>hi there, happy new year!</p>
-
-<p>I just got back to my dorm several hours ago , from downtown tianjin. I was with three of my best friends celebrating the upcoming new year, 2012, and we were having great fun through the last moment of 2011</p>
-
-<p>to the very first cup of beer of 2011. cheers!</p>
-
-<p>so, I decided to post something to end this year and open up the new year. the title,  which I think is brilliant,  If you know  some c programming language or something called ‘comma expression’, I think you will feel the same way</p>
-
-<p>so, here we go.</p>
-
-<p>2011, kinda a tough year for me, even though I wrote/drawn ‘hold on’ and ‘turn on’ on my 2011 edition of QQ icon. but still. not because I made one of the biggest decision of my life on my own, but I have to deal with my problems on my own. I have to learn by myself,  I have cheer me up if I was feel upset. I have to learn to earn the every opportunity out there and finally grab some of them. sometimes I failed,</p>
-
-<p>I told no one, then just keep on reading and learning, coding.  anyway, I learn a lot from 2011 knowledge-wise and horizon-wise.</p>
-
-<p>the later part of 2011, I don’t think much of it. I got back to tjpu, finish my education and keep on learning. my first project ended failure, but, there’s still some people love it and feel interesting, so, not a totally  failure for me. maybe, I will re-open this project someday when time’s right. my second project is under coding now, I still have faith in that, because people need a stuff like that, to keep track of there favorite shows.</p>
-
-<p>the good part of my returning are:</p>
-
-<p>One:</p>
-
-<p>I still have those two best buddies out there waiting for me and help me a lot, I even doubt that I will , some day, do the same things to the others. so, I am really really feel thankful for having you two, hoping we</p>
-
-<p>will get really drunk one day, that the way of us to celebrating out brother-ship.</p>
-
-<p>Two:</p>
-
-<p>that awesome girl, again. I am just feel nothing but lucky to know her and we’re still in a very very good friendship , or it’s not just friendship, I don’t know. the point is, throughout those about three months, she’s just getting better and better. just totally a new person for me,  compare to the first day I met her.  but still, I am not that BAD, am I ?</p>
-
-<p>I know I am a good guy, I am funny,  and I can make a girl laugh a lot while we’re hanging out, and …….</p>
-
-<p>I am ambitious and I have very clear goal  about myself deep down in my heart, but I never talked much about it with friends. so, it’s not a surprise if a girl likes me, I know that too.</p>
-
-<p>but, she is just awesome , I can not think about another word to describe her……</p>
-
-<p>Three:</p>
-
-<p>I know two geek-guy through a friend’s introduction, it’s kinda a luck , I guess. they help me a lot in exams and finally, I have someone to talk about technic stuffs in school. they just let me know, even if we’re in a crap university, there are still a few people who love what their do and will to put there times and energy into it. so, I am not alone. hope we can cooperate in the future. that’s the guy I can look for if I am ready to do something serious, and it’s the best time to find your future partner in the college. I think.</p>
-
-<p>Sum up:</p>
-
-<p>I met three new friends this year and I love them very much</p>
-
-<p>even thought I failed to get the this year’s internship, which I was longing for a very long time, but just look at the bright side, I got more time to learn thing, to make new friends if I had to, so, just be patient. I think when the opportunity comes again, I am having a really good shot of grab it.</p>
-
-<p>2011 , 2011 ; part 1/2 end.</p>
-
-<p>To be continue.</p>
 ]]></content>
   </entry>
   
