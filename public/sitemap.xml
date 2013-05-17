@@ -471,19 +471,25 @@
         <lastmod>2013-05-15T22:46:31+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://sunus.me/blog/2013/05/17/great-article-about-troublshooting-a-server-in-first-five-minutes/
+        </loc>
+        <lastmod>2013-05-17T10:01:07+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://sunus.me/about-sunus/</loc>
         <lastmod>2013-02-24T23:20:23+08:00</lastmod>
     </url>
     <url>
         <loc>http://sunus.me/archives/</loc>
-        <lastmod>2013-05-15T22:46:31+08:00</lastmod>
+        <lastmod>2013-05-17T10:01:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://sunus.me/blog/archives/</loc>
-        <lastmod>2013-05-15T22:46:31+08:00</lastmod>
+        <lastmod>2013-05-17T10:01:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://sunus.me/</loc>
-        <lastmod>2013-05-15T22:46:31+08:00</lastmod>
+        <lastmod>2013-05-17T10:01:07+08:00</lastmod>
     </url>
 </urlset>
