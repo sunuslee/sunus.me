@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-05-17T10:01:14+08:00</updated>
+  <updated>2013-05-30T00:17:54+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[On Holiday]]></title>
+    <link href="http://sunus.me/blog/2013/05/29/on-holiday/"/>
+    <updated>2013-05-29T23:56:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/05/29/on-holiday</id>
+    <content type="html"><![CDATA[<p>Hey, Long time no see. i have been on holiday for about a week and we&#8217;ll get back to Tianjin in a few days later.</p>
+
+<p>We&#8217;d been to <strong>Nanjing</strong>, <strong>Suzhou</strong> and we just got to the last destination, that&#8217;s, <strong>Hangzhou</strong>.</p>
+
+<p>Overall, the holiday is fun and interesting. but, <strong>I just wish you were here</strong>, to see the beautiful views and having the yummy &amp; delicious local foods.</p>
+
+<p>and also, take some of the stupid and funny pictures like this:</p>
+
+<p><img src="http://sunus.me/images/2013-travel-in-may.jpg" title="Fun and Stupid" alt="fun and stupid but wish you were sitting right next to me" /></p>
+
+<p>good night and good luck !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[great article about troublshooting a server in first five minutes]]></title>
@@ -1208,32 +1227,6 @@ even though i met someone new and we had great time, still i would rather going 
 
 <p>hoping i can getting in 951 soon.
 good night, gotta code tomorrow.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[first blog with codes inside]]></title>
-    <link href="http://sunus.me/blog/2012/02/28/test/"/>
-    <updated>2012-02-28T21:09:04+08:00</updated>
-    <id>http://sunus.me/blog/2012/02/28/test</id>
-    <content type="html"><![CDATA[<p>弄了差不多半个小时，把blog的嵌入代码插件弄好了：）
-早上看ruby的时候了解到一些类的知识，遇到了之前python迟迟不能解决的一个问题。琢磨了一会，mission accomplished!
-嗯，主要就是一个带counter的urlopener, 之前dbci的urlopener在调度上面总是实现地不怎么 &#8216;elegant&#8217;, 如今使用了带counter的urlopener，嗯。。还看得过去:)</p>
-
-<pre><code># this is a urlopener class with a counter.
-# sometimes i just this this urlopener to open urls and make schedulings based on counter
-
-class opener_with_counter(urllib.FancyURLopener):
-    #basically, it's just a URLopener class plus a counter.
-    def __init__(self, *args, **kwargs):
-        urllib.FancyURLopener.__init__(self, *args, **kwargs)
-        self.count = 0
-
-    # a warpper of urlopener.open.
-    def open_with_counter(self, fullurl, data=None):
-        self.count += 1
-        return self.open(fullurl, data)
-</code></pre>
 ]]></content>
   </entry>
   
