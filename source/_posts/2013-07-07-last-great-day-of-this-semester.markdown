@@ -22,9 +22,11 @@ Yesterday, i finally got a chance to met her and not doing any kinds of intervie
 
 She is still cute, besides i felt like we have a lot in common so that we didn't end up like running out of topics to talk about, which i was kinda afraid before we met. also, her personality is good, just like i excepted.
 
-she said she had a good, more that once. which I am not sure if she really mean that or not:) but anyway, it's always good to here stuffs like this.
+She said she had a good, more that once. which I am not sure if she really mean that or not:) but anyway, it's always good to here stuffs like this.
 
-there're some funny parts i think i should also mention in here.
+I don't know how she think of me, but i think we will met again, then, i will win the billiard game, at least:)
+
+Also there're some funny parts i think i should also mention in here.
 
 1. I lost the billiards game, i did make some brilliant shots. but somehow, i just lose.
 2. When we got to the restaurant, we had to siting right next to each other, on the one side of the table. but i like setting in front of people, i thought that's more comfortable. we both sitting in the one side of that table just looks like much more intimate. The reason we do this is because that table has a really  good view of the show, which made it less awkward.
