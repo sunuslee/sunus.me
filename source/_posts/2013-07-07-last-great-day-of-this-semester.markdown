@@ -22,7 +22,7 @@ Yesterday, i finally got a chance to met her and not doing any kinds of intervie
 
 She is still cute, besides i felt like we have a lot in common so that we didn't end up like running out of topics to talk about, which i was kinda afraid before we met. also, her personality is good, just like i excepted.
 
-She said she had a good, more that once. which I am not sure if she really mean that or not:) but anyway, it's always good to here stuffs like this.
+She said she had a good time that night, more that once. which I am not sure if she really mean it or not:) but anyway, it's always good to here stuffs like this.
 
 I don't know how she think of me, but i think we will met again, then, i will win the billiard game, at least:)
 
