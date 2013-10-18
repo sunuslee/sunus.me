@@ -1,0 +1,37 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner">{% include header.html %}</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			{% unless page.banner == true %}
+				{% include banner.html %}
+			{% endunless %}
+			<div class="mid-col-container">
+				<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
+			</div>
+			<footer id="footer" class="inner">{% include footer.html %}</footer>
+			{% include after_footer.html %}
+		</div>
+	</div>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project=7653790; 
+        var sc_invisible=1; 
+        var sc_security="bd47e345"; 
+    </script>
+    <script type="text/javascript"
+        src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript><div class="statcounter"><a title="web counter"
+                href="http://statcounter.com/free-hit-counter/"
+                target="_blank"><img class="statcounter"
+                src="http://c.statcounter.com/7653790/0/bd47e345/1/"
+                alt="web counter"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>

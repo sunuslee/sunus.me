@@ -1,0 +1,62 @@
+---
+comments: true
+date: 2007-08-16 19:23:34
+layout: post
+slug: the-manthe-legend-the-one-and-only
+title: THE MAN,THE LEGEND.THE ONE AND ONLY
+wordpress_id: 55
+categories:
+- 未分类
+---
+
+CHANGES IN NIP
+
+
+
+
+HeatoN going to inactivity as a coach
+
+
+
+
+which means he stops playing.THE MAN THE LEGEND THE ONE AND ONLY, THE NiP had gone...
+
+
+
+
+HeatoN i will miss you.this is only i can do,but ..... GL HF IN THE FUNTURE!
+
+
+
+
+ 
+
+[![](http://byfiles.storage.live.com/y1mqzJXA0ssU7sc6buyP-yi3CQ7bqUE5zCcL6iBTOz7n43jL5PCwhO6-mrEL875E-XTTJlirkjKa-LznvZ12K8eEhCzUej9nUFz2g7DccCrcYi-Kcgm2YYib-K6aIcMu81DZ2Do6iv6SVA)](http://byfiles.storage.live.com/y1mqzJXA0ssU7sc6buyP-yi3CQ7bqUE5zCcL6iBTOz7n43jL5PCwhO6-mrEL875E-XTTJlirkjKa-LznvZ12K8eEgDSAmWWODBt-AIsGuhvAC7CXe0s78mFCNTy6hMnMnxnViTTPc0B0zU)
+[![](http://byfiles.storage.live.com/y1mfH4QC8jmT0T6iaU1M3PJmCx1l97qiv2R20Z_tuxSoEVWp9xgyKED_ssXLBInhSmUaGmJ4WNvm7bLO-Qnb30ZU4sp3pDH_Nl8AmacoL3yAOFDwnjdqD6dmli4inoMFzYeOILyIdAxeuk)](http://byfiles.storage.live.com/y1mfH4QC8jmT0T6iaU1M3PJmCx1l97qiv2R20Z_tuxSoEVWp9xgyKED_ssXLBInhSmUaGmJ4WNvm7bLO-Qnb30ZUyL2Imk8B1mRxfhlZCdYI_4aJaoeSfuwrOHUSk1aNFW26I6hqcEqXyI)
+
+[![](http://byfiles.storage.live.com/y1mpX-ZhQcsFv_J-HVYfLjLTawNA5QBuJEgZuC3SOOg6xlZYuDm2vbD--TIjxizEG3k0TahnMuiVedQ94x9X5Kn6ovigFi7BAg8hDSVlDIQuR07J3AVyiWdzP3pPzTTVcp38eM898CEq1M)](http://byfiles.storage.live.com/y1mpX-ZhQcsFv_J-HVYfLjLTawNA5QBuJEgZuC3SOOg6xlZYuDm2vbD--TIjxizEG3k0TahnMuiVedQ94x9X5Kn6kQCjJoGJKQJtC1mVjcjm5g5i_MsLZjK5k7Qz5F0U1n7oNkjJmaADNg)
+[![](http://byfiles.storage.live.com/y1mTEQdAQ3rLEBgpn1WC1wkSf-oVfd_a4J14gZQJMUPCjw7M0tw08_szdzgvEzHJbAVkBBjcXmukYLhVX1TEzr-l7h5R7ZnoYNHgxiR_Q8YOnIghVNsb8mulraBqGugF1EJXE9zC-Dp8Z4)](http://byfiles.storage.live.com/y1mTEQdAQ3rLEBgpn1WC1wkSf-oVfd_a4J14gZQJMUPCjw7M0tw08_szdzgvEzHJbAVkBBjcXmukYLhVX1TEzr-l_RDAMczD6ntDZbf3XFQ_M7yjgNX3cMAuSDOZb1yu3VCl0Kr3vxeNaY)
+
+[![](http://byfiles.storage.live.com/y1m8xXQQW7DKfGNctdhQiTBF_ovd394yfmvxRKLjEneK4iDipK6DpftlGjdlTuRm_xFAOZ2CETViT_o4EqNag6qT28OACuNdiTrFgiGvhvuyjQ6Qid58-qA48e1dbyIoqxKcOujjNG1aFo)](http://byfiles.storage.live.com/y1m8xXQQW7DKfGNctdhQiTBF_ovd394yfmvxRKLjEneK4iDipK6DpftlGjdlTuRm_xFAOZ2CETViT_o4EqNag6qT5pIkXUMQwKvnDBdEUhiK5Iw-_DM6xanRwPOkq1yvdEwH_-O7Q87H9I)
+[![](http://byfiles.storage.live.com/y1mj40bH5fScxGQABrZZ5SvebHRl2BcxQNwPb7rzxU4WBHzg7rU305ymmWqr2hzNBS3YCLktJ8wy9rCjE-OwEfScNNFZ3C4nN-l5zce0RY9-U022A76fqdWgkVbuhc0SJhscf764Sf8Jq8)](http://byfiles.storage.live.com/y1mj40bH5fScxGQABrZZ5SvebHRl2BcxQNwPb7rzxU4WBHzg7rU305ymmWqr2hzNBS3YCLktJ8wy9rCjE-OwEfScLU3TkUnbL4sjtgGGCOuWlXwhhCKGVSMi-LAsx86jZYyPmq6fjd0OQg)
+
+[![](http://byfiles.storage.live.com/y1m429vwM9funKboRa2or-azwGpxADkCi4MfS6lTXmAfohZqb4TPX-IeXNBgYTJGi9RSTD2xd1r9mvw90ftokgGN1zfGs7gA4WBLQyZgz1ET7loWYrsGJDmxx0D-LXGW3Dh-YkOJAMmv_E)](http://byfiles.storage.live.com/y1m429vwM9funKboRa2or-azwGpxADkCi4MfS6lTXmAfohZqb4TPX-IeXNBgYTJGi9RSTD2xd1r9mvw90ftokgGN5J1r3bObp_WuVEVi-yCM0-dSNwo1ThQ6aa2JIBtEBCkeqQCkmTsWnk)
+[![](http://byfiles.storage.live.com/y1mMZrK4T732VQMpHFxQKnn8tir5he8JyFTH6yefWPPxJ4x_DFh5AWUdwm97Js2s45BtN1VuqUjO5Q-HZidcRfM7T5KRgkjrQWfgDQIf3cNBpsSNNVgAKAWRwPADaofIUAyNpuuZFVSZ04)](http://byfiles.storage.live.com/y1mMZrK4T732VQMpHFxQKnn8tir5he8JyFTH6yefWPPxJ4x_DFh5AWUdwm97Js2s45BtN1VuqUjO5Q-HZidcRfM7d3s0DZs-OJwQssLSJgMNVcU00J8Z9kub-4mao6PZl6pHAXNJVopctE)
+
+[![](http://byfiles.storage.live.com/y1mHigGVt-VV85hDAP2igWxev-hbuIeFr1G-FBv6VscJHnRsRSsc7IicTXpCMiKvalIb2I-CONYJ_k1A6QAGHYdtOkxLObdwDJuDERoVzRUAlUoICFkWEdiN2RyM0_VWaQCUqu97FEHO3M)](http://byfiles.storage.live.com/y1mHigGVt-VV85hDAP2igWxev-hbuIeFr1G-FBv6VscJHnRsRSsc7IicTXpCMiKvalIb2I-CONYJ_k1A6QAGHYdtMQ6Xak5EI5PyQSZcWQZBuibzeufuZhg2j3l-Po300b3N4B8Ewh3u5I)
+[![](http://byfiles.storage.live.com/y1m8jEfsXQltoxWZemwZiPJVFjO0Sw1-QLHsEA59uUBVAFSwOECnBI8hPfV5IugNFbUXAYBX0hDu0jMB0fUoZNiIvbMEE4h1oa8Aurt2hPtEa7CePUABwaOj3eTXfmTwl5v2d4LlSvvbxo)](http://byfiles.storage.live.com/y1m8jEfsXQltoxWZemwZiPJVFjO0Sw1-QLHsEA59uUBVAFSwOECnBI8hPfV5IugNFbUXAYBX0hDu0jMB0fUoZNiIoBBuLCNjowPTn8HXCFsxiSRsaUSVShf_qvN8WWHlZPTFMGnAgxcxh4)
+
+[![](http://byfiles.storage.live.com/y1m8AxaFIpqozuB07OJULesp2mOWhWUkursOdxr1_F40SMBZ0vi_KN2uHIaGvGgvgDFlU2Ve2E7J5NXUCOS6mF5I-Z-qHXMiQ_l8b30u_ZD_FeFJlz-zmLM0lhmk_KIvvwKOrRNPUgOUZw)](http://byfiles.storage.live.com/y1m8AxaFIpqozuB07OJULesp2mOWhWUkursOdxr1_F40SMBZ0vi_KN2uHIaGvGgvgDFlU2Ve2E7J5NXUCOS6mF5I4JUQtrI5jwjRrBGOf_vLPbLsLOIEHbHtJFs8oM1YDaKqpffP5nGIOU)
+[![](http://byfiles.storage.live.com/y1mWhbZxWHknS8S_NB4kqn-1EqiOcLRmPQa9RFMLly7IqBDXaXnbJeeG7euTeUGWRv-ZUy53RLAifS4YzNG5oR-ztSwaLwzUItiZLlw4_MerBDCJan3Ll_C0grOpyWyul9F13DE6vhetKI)](http://byfiles.storage.live.com/y1mWhbZxWHknS8S_NB4kqn-1EqiOcLRmPQa9RFMLly7IqBDXaXnbJeeG7euTeUGWRv-ZUy53RLAifS4YzNG5oR-zoK_6sWmEinj7af2M3C5OiHG-xrmMzs58ELCUDae-zym9D3SAwYrVQ8)
+
+[![](http://byfiles.storage.live.com/y1m_k0LHSGtDmB_X2jEBs5RZL8uAiBl3cSK1bUbyDwyQ6AM4y4Epp0z6QdGTQTT9NNvTHV8Q7BIooyx9qik4TFavXR4qMpoLgPk4vf0x4SOHSeOR1PO3zCRXrJX2gM3dyxQJfsb-fIqiBE)](http://byfiles.storage.live.com/y1m_k0LHSGtDmB_X2jEBs5RZL8uAiBl3cSK1bUbyDwyQ6AM4y4Epp0z6QdGTQTT9NNvTHV8Q7BIooyx9qik4TFavbpAZ3qAsGGOWJSmszLVyo2a9wdJRFqHirS-g_AoF2YQv4yHsxmPsKs)
+[![](http://byfiles.storage.live.com/y1mDLZI7gRID-IotEuM5Y_Am-OOWvkinUpeNpsqnH4zyb2PwLtk_1L_qm4ksWYfSR0NNeLtZwp1O17PAimA_NTdkn1H8EM4d-sWEx8cOrsvwLycg-iswDhQRqq3rItcfo39TOOpjTPT5Ck)](http://byfiles.storage.live.com/y1mDLZI7gRID-IotEuM5Y_Am-OOWvkinUpeNpsqnH4zyb2PwLtk_1L_qm4ksWYfSR0NNeLtZwp1O17PAimA_NTdkqT-3E92IYjC6yM4MtgAJ_kihILijSq7hy6ApoyZE_YBNJFA2_V8K1g)
+
+[![](http://byfiles.storage.live.com/y1mBnBC-f7nU_VlPttT2I-WbYIMHDyBVpALHtMrKOf8R0dII9Hm3hXXqdvmFnaZpJnnDjjcdNqrCacWBGJHog0v05e1FihnP7klv19ZGp9PXcRYyvnTjzW3734rzWS4_rVlIlOU-lrdEF0)](http://byfiles.storage.live.com/y1mBnBC-f7nU_VlPttT2I-WbYIMHDyBVpALHtMrKOf8R0dII9Hm3hXXqdvmFnaZpJnnDjjcdNqrCacWBGJHog0v046SSewCb6iP679NLoQa6WBW-ZCp9hufFtltY84U-6ACWvExA1N2ctM)
+[![](http://byfiles.storage.live.com/y1m0qon49J1vgqFyRxwVkZDMYwVPwMncDDeRw-Vb8VGWAA2EDOkIhhuxikujRG2oJdvq3ob-9IFTEXEimkBtSMEISo69Dg-B2Ev1VxAM5VPTZ5wwYa2zC8jcRB4xr2kfQqFzOg_Z0zGFI0)](http://byfiles.storage.live.com/y1m0qon49J1vgqFyRxwVkZDMYwVPwMncDDeRw-Vb8VGWAA2EDOkIhhuxikujRG2oJdvq3ob-9IFTEXEimkBtSMEIZTX2D08hzOiFWsnzV55IyoWjIGf8f_8OZUC33i8NapzDOq_ZE1BsfA)
+
+[![](http://byfiles.storage.live.com/y1m7_0mZRR2aEtezNdTSVHY6aLafyRdNo_TMMYFJyiJilkFcRkeqDh8h7u7hj27gt2JEvyql0PsMs_rTReXjdt3Q1MpFGeirKwfYusy4I1KKo13JYV-p9exTMhof6eO7Y6bvRlHxKFPudw)](http://byfiles.storage.live.com/y1m7_0mZRR2aEtezNdTSVHY6aLafyRdNo_TMMYFJyiJilkFcRkeqDh8h7u7hj27gt2JEvyql0PsMs_rTReXjdt3QyA91sUH-AEk0VKDkESpAB9KD7iWD995oJGMMSPd_b5QjJVPk4nF-IQ)
+[![](http://byfiles.storage.live.com/y1mcIb9LhTRFotJ23tgUQoDDQuC-aLsTs5JOaH5RvJUoog43JQ8bipNQZgZm_muIjPk2pfEUv4NrVL4JuxlrWSCpCIf8Ou7E6SrviZdLAiLAmPdq0F8FqI5nbnG3rbWflNhyb0mH5zXLGU)](http://byfiles.storage.live.com/y1mcIb9LhTRFotJ23tgUQoDDQuC-aLsTs5JOaH5RvJUoog43JQ8bipNQZgZm_muIjPk2pfEUv4NrVL4JuxlrWSCpE_oKdGwHe_TjAqff6P4GgDPFcXj8JfCP4gM6nK31ToGP5BWf5co1t8)
+
+[![](http://byfiles.storage.live.com/y1mqc9v7KmVb28eGcBYZH4oZJQ4vIjl-rKbDkQbWtnF9ayrgYOsbL7Qmm6QB4Rx2GMqgu9KkWKZNKKxeQwYPTQtgPNGskeFYpnIrm9O4s9DKYv0riGtOLnATXX-OkcnMru9guxK_FHjw_s)](http://byfiles.storage.live.com/y1mqc9v7KmVb28eGcBYZH4oZJQ4vIjl-rKbDkQbWtnF9ayrgYOsbL7Qmm6QB4Rx2GMqgu9KkWKZNKKxeQwYPTQtgFLX5B_gNr_UL2yKiyYMgP-MLiTerIzpk6nuO9mBvfTsktYp0Wj6Kdg)
+[![](http://byfiles.storage.live.com/y1mzlKpiUxsfi8jirvzfsApY0JlyfZGjSJlf2oiOz8m4ul4MJ2p82IHInxDe8fmJI2oboMcaAwsLJ8XKfE0V7WkfQDThFmVt-odCSdbYKOb1r-9joLB0u4hF0pCx2hWTsJMw4Jwo5-KhlQ)](http://byfiles.storage.live.com/y1mzlKpiUxsfi8jirvzfsApY0JlyfZGjSJlf2oiOz8m4ul4MJ2p82IHInxDe8fmJI2oboMcaAwsLJ8XKfE0V7WkfY0GjMyJPuc2nW8MbIKAjloXJs3HRnUFm9ngur0P9ssp-Bd7bP6W7iY)
