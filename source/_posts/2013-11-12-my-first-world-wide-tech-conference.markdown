@@ -35,7 +35,7 @@ Finally, Here is some of the highlights of these two days.
     
     ![Photo1](/images/JingJS-4.jpg)
 
-* Develops on a crowd subway
+* Developers on a crowd subway
     
     ![Photo 2](/images/JingJS-1.jpg)
 
@@ -43,7 +43,7 @@ Finally, Here is some of the highlights of these two days.
     
     ![Photo 3](/images/JingJS-3.jpg)
 
-* YEAH! That's me and Developer Jennifer Anistor :) 
+* Yay! That's me and Developer Jennifer Anistor :) 
     
     ![Photo 4](/images/JingJS-2.jpg)
 
