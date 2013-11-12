@@ -4,7 +4,7 @@
   <title><![CDATA[What happens here, stays in here.]]></title>
   <link href="http://sunus.me/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-10-18T22:41:41+08:00</updated>
+  <updated>2013-11-12T14:39:17+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My first world-wide Tech Conference]]></title>
+    <link href="http://sunus.me/blog/2013/11/12/my-first-world-wide-tech-conference/"/>
+    <updated>2013-11-12T13:00:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/11/12/my-first-world-wide-tech-conference</id>
+    <content type="html"><![CDATA[<p>Hi, Since I&#8217;ve got so so much stuffs to be take care of lately.  so i didn&#8217;t post blog very often lately. But right now, I think everything is back to track now.  and i finally got some free times to do things i&#8217;ve always planned to do:) cheers!</p>
+
+<p>I just get back from a Front-end conference called 「JingJS 2013」host in Beijing. That&#8217;s a world-wide conference that let&#8217;s some people that&#8217;s very great &amp; active at Front-end Open Source community to share there experiences and projects that they found interesting and encourage people like us to join them, to share.</p>
+
+<p>So, I was chosen to be a guy named <a href="http://github.com/mde">Matthew Eernisse</a> &#8216;s buddy. My job mostly is to be his assistant. including communicate with the organizer and show him around the city.</p>
+
+<p>When i was about to go to the airport to pick him up, I somehow met a girl Leslie who also had this assignment to pick up a speaker named <a href="http://github.com/alyraz">Alyssa Ravasio</a>, but then i just call her Jennifer Aniston. because i found she looks like Jennifer Aniston, in some way. so&#8230;  I will talk about it later.</p>
+
+<p>Later on, Another speaker join us. He is <a href="http://github.com/oren">Oren Golan</a>. A handsome &amp; charming guy who don&#8217;t drink. yeah, he does NOT drink alcohol.</p>
+
+<p>After me and Leslie got those three speaker off the plane, We decided to let them take the subway to the hotel. Because we thought they might want to feel what it&#8217;s like in young people&#8217;s daily life, taking subway go to work, etc.</p>
+
+<p>That&#8217;s pretty amazing. Matthew said. the subway is tooooo crowd. HAHAHAAHA.</p>
+
+<p>Then we went out of the subway and can not grab a available taxi. Matthew felt amazed again:)</p>
+
+<p>The next two days we went go the conference, met a lot of great guys from different countries.  That&#8217;s so mind-blowing event. The way that people loves Open Source is so beyond my imagination. A Chinese guy talked to Matthew about that his company develop a framework that likes Node a lot but using coroutine instead of callbacks. and is not  ready to open source yet. But Matthew just kept saying that you need to open source! again and agin.
+that&#8217;s really funny.</p>
+
+<p>Besides the conference, we had two different parties those days. one is a little more geeky and the other it more like a normal party. people drink, got drunk and plays beer ball  Ping Pong. Me and a guy call motherFORKER even win a round! pretty amazing!</p>
+
+<p>Me and Matthew also talk about stuffs like what&#8217;s developer&#8217;s life like in China, the ways to think as a developer and what his thought about his company <a href="https://www.yammer.com/">yammer</a> being bought my Microsoft last year. Also, the GFW is a topic you can never avoid, especially when you talked with someone who just came to China:)</p>
+
+<p>Finally, Here is some of the highlights of these two days.</p>
+
+<ul>
+<li><p>Just picked up Oren at airport. Leslie made this name tag for me(Because mine is too ugly). It looks great!</p>
+
+<p>  <img src="http://sunus.me/images/JingJS-4.jpg" alt="Photo1" /></p></li>
+<li><p>Develops on a crowd subway</p>
+
+<p>  <img src="http://sunus.me/images/JingJS-1.jpg" alt="Photo 2" /></p></li>
+<li><p>Matthew kept saying Go Open Source</p>
+
+<p>  <img src="http://sunus.me/images/JingJS-3.jpg" alt="Photo 3" /></p></li>
+<li><p>YEAH! That&#8217;s me and Developer Jennifer Anistor :)</p>
+
+<p>  <img src="http://sunus.me/images/JingJS-2.jpg" alt="Photo 4" /></p></li>
+</ul>
+
+
+<p> I had a really really funny &amp; interesting days with all of you guys:):)
+ Sorry, I forget to mention those Javascript &amp; Node stuffs :( they are less interesting!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Too Busy to write a long post]]></title>
+    <link href="http://sunus.me/blog/2013/10/18/too-busy-to-write-a-long-post/"/>
+    <updated>2013-10-18T22:43:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/10/18/too-busy-to-write-a-long-post</id>
+    <content type="html"><![CDATA[<h1>It&#8217;s been busy.</h1>
+
+<p>So, I am doing alright now. but a lot of stuffs going on those days and <strong>i will write a long post util I became &#8220;idle&#8221; again</strong> i promise.</p>
+
+<p>As you can see, in this blog&#8217;s left panel, there&#8217;s a <strong><a href="http://sunuslee.github.com">new link</a></strong> called <strong><a href="http://sunuslee.github.com">Blog for coding</a></strong>. and it&#8217;s my new blog for codes. I started it from October, 2013.Mostly, i did that blog for codes is because i want to keep a track of what i learn and what i&#8217;ve made during the process of coding.</p>
+
+<p>It could be good for me. and it looks AWESOME with a cool domain:)</p>
+
+<p>If you are interested in my code, go to my <strong><a href="http://sunuslee.github.com">Blog for coding</a></strong></p>
+
+<p>If you are insterested in me or my life, you can stay here as long as you want, This server will keep up and running for you\<sup>\^</sup></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[last great day of this semester]]></title>
@@ -1314,52 +1384,6 @@ and finally, i get back to Beijing and post this blog. good night. and hope i ca
 <p>wish me luck !</p>
 
 <p>bye and wish u a happy mid-autunm festival!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[new chapter gose go :)]]></title>
-    <link href="http://sunus.me/blog/2012/08/19/new-chapter-gose-go/"/>
-    <updated>2012-08-19T21:54:11+08:00</updated>
-    <id>http://sunus.me/blog/2012/08/19/new-chapter-gose-go</id>
-    <content type="html"><![CDATA[<p>yeah, after about two months of intern-ship in Beijing, i get back to my sweet home for a couple of days.stay with my family and friends. it&#8217;s  really really happy time spent with them, and my sisters they are doing really really good so i am proud of them :) ps, i bought my mom a new SAMSUNG GALAXY smart phone using my first salary, it did feels great!</p>
-
-<p>and my friends, yeah, i really really want them to  change their names, but i didn&#8217;t get the perfect girl i want , didn&#8217;t bring her to my city then let my friends see how awesome and amazing she is, and how lucky i am if i had a girlfriend like she:) anyway, i still like her a lot even thought i am trying really really hard to meet some new girls and hangout with them, do things we did when we first met, but, they are, they are just NOTHING ON U. and i know now, i can not forget you for sure:( i keep the movie tickets we saw together,  the birthday gifts i wished i could give you by my side,which i know you will like it, but, you never know what that is:( and i also want to finish those drinks on the street, it&#8217;s like one or two more cups, and we can get some free drinks. sorry, i can not remember the exact numbers.</p>
-
-<p>i don&#8217;t even know whether you will read this far or not, i don&#8217;t even know whether you will ever come to this blog or not. but if you do, even if i don&#8217;t know whether you had been there for a while or not, it&#8217;s okay.  if i were you, i saw this blog and i know much this guy likes you. i will be crying:) kidding</p>
-
-<p>and my intern-ship goes very smoothly, the company is growing and i am doing kinda good job there. so not much to talk about.</p>
-
-<p>anyway, new chapter of my life goes on, and you are the only missing part of my new chapter.! hoping you can be in it, some day, maybe, perhaps :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[So far so good:)]]></title>
-    <link href="http://sunus.me/blog/2012/07/30/so-far-so-good/"/>
-    <updated>2012-07-30T08:38:15+08:00</updated>
-    <id>http://sunus.me/blog/2012/07/30/so-far-so-good</id>
-    <content type="html"><![CDATA[<p>Hi, It’s been a while since the last post, isn’t it ? so many things going on those days, I got dumped , yeah, I got dumped by a very amazing and awesome girl that I’ve always talked about.</p>
-
-<p>and some of my friends I played a lot counter-striker with are graduated from university, so no more counter-strike for a while.(OH REALL? I don’t know:D)</p>
-
-<p>they are a bunch of nice guys and brothers to me and I am looking forward to play with them again!</p>
-
-<p>it’s sad, but life moves on, as it always does.</p>
-
-<p>and I came to Beijing on July 1st, (WOW! FINALLY!) I can feel that there is a very exciting , interesting and wonderful journey just right there waiting for me to explore, to experience. and I am ready to embrace all of those wonderful things! such as new opportunities, new apartments and new roommates:) i think some of them is kinda interesting, i am looking forward to meet them:)</p>
-
-<p>let’s talk about what I did recently, finally, I choose the best offer I can get and starting to write some serious codes :) it’s fun and it just really surprise me a lot!</p>
-
-<p>I kind of thoughts that I am kinda good at what I do, that’s coding, but when I FINALLY got here and starting working, I just found out there’s so many people are just really really good at it, too. most of them are older than me, but they just know so so so many skills than I do, I don’t know what I will become a year or two year later, hoping I can be much better than they’re now, lol !</p>
-
-<p>the environment of my workspace is very nice, I am very very satisfied can my very first intern job can be like this. I can get a very nice sleep, and get up anytime I want, then head off to my office. because there’s no such rule that requires you have to be the office before a specific time, this is what I really love about this company! the food here is ok, but I can deal with that. by the way, the front-desk girl is kinda cute and I ACCIDENTALLY  pissed her off several times LOL!, even thought I just got here some day ago, sorry about that:(, but I really really didn’t do those things on purpose, I just don’t know much about the rules..</p>
-
-<p>so, right now I just need to work hard and prove my worth and make more friends and pay some EXTRA attention to the relationships that may just come in, who knows LOL!</p>
-
-<p>anyhow, I still think of you a lot, and I saw a girl like you a lot right in the subway, even thought I knew that girl isn’t you for sure, but my heart just beat faster at that moment. i now can move on with my life, hope u can do the same:)</p>
-
-<p>see you!</p>
 ]]></content>
   </entry>
   

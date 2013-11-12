@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: life | What happens here, stays in here.]]></title>
+  <title><![CDATA[Category: Life | What happens here, stays in here.]]></title>
   <link href="http://sunus.me/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://sunus.me/"/>
-  <updated>2013-10-18T22:41:41+08:00</updated>
+  <updated>2013-11-12T14:39:17+08:00</updated>
   <id>http://sunus.me/</id>
   <author>
     <name><![CDATA[sunus]]></name>
@@ -14,167 +14,21 @@
 
   
   <entry>
-    <title type="html"><![CDATA[0x17]]></title>
-    <link href="http://sunus.me/blog/2013/03/25/0x17/"/>
-    <updated>2013-03-25T22:17:00+08:00</updated>
-    <id>http://sunus.me/blog/2013/03/25/0x17</id>
-    <content type="html"><![CDATA[<p>hi, there.
-yeah, i am gonna turn 0x17 tomorrow, that's another whole new year for me and i think i just end my time in 0x16.
-after reading my last year's post, the theme of my 0x16 is 'trying hard to be a guy that deserves you' , i think i failed, but i will continue to do so in my upcoming 0x17 times :)</p>
+    <title type="html"><![CDATA[Too Busy to write a long post]]></title>
+    <link href="http://sunus.me/blog/2013/10/18/too-busy-to-write-a-long-post/"/>
+    <updated>2013-10-18T22:43:00+08:00</updated>
+    <id>http://sunus.me/blog/2013/10/18/too-busy-to-write-a-long-post</id>
+    <content type="html"><![CDATA[<h1>It's been busy.</h1>
 
-<p><strong>I failed to win her heart :&lt;</strong></p>
+<p>So, I am doing alright now. but a lot of stuffs going on those days and <strong>i will write a long post util I became "idle" again</strong> i promise.</p>
 
-<p>but anyway, my 0x16 times turned out to be good. i got a nice job in the early year, i learned a lot from those awesome guys i met in the dev team and i gained a lot, i wish to be as good as them in the beginning. but in the end, i got acknowledged by them. it's not easy, but it's quite a lot of fun.</p>
+<p>As you can see, in this blog's left panel, there's a <strong><a href="http://sunuslee.github.com">new link</a></strong> called <strong><a href="http://sunuslee.github.com">Blog for coding</a></strong>. and it's my new blog for codes. I started it from October, 2013.Mostly, i did that blog for codes is because i want to keep a track of what i learn and what i've made during the process of coding.</p>
 
-<p><strong>I really enjoyed thoses times in beijing, writing codes and getting paid and having tons of fun with new friends</strong></p>
+<p>It could be good for me. and it looks AWESOME with a cool domain:)</p>
 
-<p>then, i quit that job and got back to school, plan to having some normal college student's life. that's, mostly a serious relationship with someone i like.</p>
+<p>If you are interested in my code, go to my <strong><a href="http://sunuslee.github.com">Blog for coding</a></strong></p>
 
-<p><strong>I need some motivation to be excellent againn</strong></p>
-
-<p>Also, this year, the main reason of me quitting the job and getting back to schol is, i really really want some <em>changes</em>, though i don't know what that is, but it will come eventually, right?</p>
-
-<p><strong>I already made some of those, namely from user-friendly linux distribution to a more flexible one, from linux to OS X, from vim to emacs, etc</strong></p>
-
-<p>I think this year will be awesome, and i'd love to take all the challenges and opportunity in the upcoming days.</p>
-
-<p><strong>i will do more sports!</strong></p>
-
-<p><strong>happy birthday and good luck for whatever that is.</strong></p>
-
-<p>END OF 0x16.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[That could be Interesting! I guess.]]></title>
-    <link href="http://sunus.me/blog/2013/02/24/that-could-be-interesting-i-guess/"/>
-    <updated>2013-02-24T23:58:00+08:00</updated>
-    <id>http://sunus.me/blog/2013/02/24/that-could-be-interesting-i-guess</id>
-    <content type="html"><![CDATA[<p><strong> Long time no see </strong></p>
-
-<ul>
-<li><p>Hi, there! First of all, happy new year to you and wish you all have a wonderful new year, i give you my very best wishes here:)
-Yeah, i did quit my job last year and had theses about 40 days of <strong>AWESOME</strong> holidays in my hometown with my family and friends which is fun and happy. We went to couple of places with views, of course, i took some photos, too. But most of those photos are mountains and some kind of <strong>vulgar</strong> pictures. LOL</p></li>
-<li><p>Besides of having fun, i got my MacBook, it's a whole new user experiences, which i can not tell it's better that Linux or not. but compare to Windows. it's definitely a piece of work. Windows sucks, i said it to all the people i care about! :) I am getting used to OS X and i think it's more comfortable to develop some <strong>app</strong> on that machine than my old laptop. But it's okay, i do Linux-related/python work on my old machine while i am also a newcomer of APP developing. i am getting my motivations back, it just feel much better that i want to and CAN code again!</p></li>
-<li><p>Tomorrow i will fly back to school and i don't know what that is, i am leading some students to launch a <strong>OpenStack</strong> project in school, even though i don't think that will be too much difficult for me, given the current situation we have. but still, i will do the most major work. don't know it's good for me or not, just wait and see how it goes. Also, i want some nice <strong>girls</strong> who's interested in front-end to help me, i don't know if she exists in my school.</p></li>
-<li><p>Finally, the same-old-boring topic, i can not stop thinking about her, i know she also had a great great time on holiday, she sure did! so, let's just hope she is still available. I even pray for that in a old temple. kidding! i didn't do that:) so, still, chances are slim but i still don't want to give up on this girl who had stolen my heart for months, in some point stolen my codes as well:&lt; hoping i can make this right. We didn't send a word to each other in this whole holiday and i am not sure if she still remember me or not. but, i had hard time picking gifts for her and lucky(or not?) enough, i got something gift picking advice from my friends and sisters. so, just wait and see if she like that or not.</p></li>
-<li><p>I am Back and I miss you all! the new semester could be a interesting one, not because of the school or class but you and all the uncertain changes and opportunity i wanted for a while!!</p></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pull Yourself Together]]></title>
-    <link href="http://sunus.me/blog/2012/12/30/pull-yourself-together/"/>
-    <updated>2012-12-30T00:11:00+08:00</updated>
-    <id>http://sunus.me/blog/2012/12/30/pull-yourself-together</id>
-    <content type="html"><![CDATA[<h4>Making Changes</h4>
-
-<p>Yes, i am writing this blog using <strong>EMACS</strong>, the ultimate text editor, i am so umfamiliar with it right now, but, i am getting better:)</p>
-
-<p>A lot stuffs going on lately, i've been weighed the pros and cons about some certain things for quite a long time.
-But now, I don't think i will <strong>LOST</strong> again, because i believe i made the right decision, just like the one i made in 2010.
-With no regrets but only excitement. I know this will become all new to me, since i regain my love for this university, which i've called it CRAPLAND for so long. I am really looking forward to what is happening next, i bet you will, too.</p>
-
-<ul>
-<li><p>Career</p>
-
-<p>  The first and foremost one is about my intern, or i'd prefer to called it <strong>career</strong> :)</p>
-
-<p>  I decided to <strong>quit</strong>, if school not kick me out right now.</p>
-
-<p>  I love my development team, my leader and brothers. yeah, we've became really really close friends!</p>
-
-<p>  I love what i do and what i will do if i remain stay there, that's something i wish i could get hands on in a year ago, and i finally get the chance to play with it. the Amazing linux kernel, filesystem, and Networking stuffs.
-And i will definitely take that offer if i got it six month ago, i wanted to write some serious code back then, besides the payment is good.</p>
-
-<p>  but, everything has a beginning has an end, that's how things work and i can only accept it. Since, i am no longer the guy i was six month ago, i am <strong>less</strong> motivated, but i will change.</p>
-
-<p>  That change will not happen if i stay in company, or Beijing. and a <strong>push</strong> just came in time, letting me easier to make the call.</p>
-
-<p>  So, here i am, back to Tianjin and hopefully i can pull myself together soon.</p>
-
-<p>  And, I am gonna thank those guy who along the way with me, helping me making the decisions, thank you!</p></li>
-<li><p>Myself</p>
-
-<p>  I wanted this subtitle as 'Relationship' or something like that, but it's okay, it's kinda a problem of mine and I have to deal with it very carefully and hopefully it turn out to be good.</p>
-
-<p>  I really really miss her during the days i was in Beijing, just right after i finished the project in company, i keep thinking about her. i can help myself.</p>
-
-<p>  luckily i got some chances to see her sometimes, those moments are wonderful and I want more.</p>
-
-<p>  We use to hang out frequently and maybe that why i am always motivated back in the days i am in school, it's a huge lose if i can not have that anymore:(</p>
-
-<p>  We had pizza at <strong>pizzahut</strong> last night, and walked in the snow, talking and laughing about her exs and some of my awkward stories. for quite a long i always thought we've never went out on rain or something like that, but this time we got snow, white, pretty snow. so, overall it's feels nice! I never walk with a girl in the snow, so, luckily me, for i picked the right day. but, i was planed to buy her something, just like the story we talked earlier, it's about a couple in a shop, the boy buy girl a cloth while she is trying it in changing room, and after she came out, the boy ask the girl to run, like escape and steal that cloth. yeah, i actually planned to do that, but.. we didn't find a nice shop yesterday night:(</p>
-
-<ul>
-<li>NOTES
-
-<ol>
-<li><p>Our first official date was go to the movie, after we brought the tickets, i suggested we eat at pizzahut nearby the theater, but then she wanted to eat at a cheaper restaurant "yoshinoya". at that time i thought maybe she don't want me to spend too much money on our first date, but it just turned out that she is just <strong>simply</strong> don't like pizzahut:(</p></li>
-<li><p>That movie is total crap, we were all confused about that movies.</p></li>
-<li><p>I still keep those tickets. the <strong>only</strong> movie we watch together.</p></li>
-<li><p>I thought she loves going to the movies, in fact, she doesn't and i, ask her to movies for like thousand times.. silly me!!</p></li>
-<li><p>I asked her to movie again, TODAY.. dumb, no wonder her dump you in the first place. :(:(</p></li>
-<li><p>NOTES above shows I need to get to know her more!</p></li>
-</ol>
-</li>
-</ul>
-
-
-<p>  but, the sad part is, i don't know when we can meet again and this is really bothering me. i didn't cherish the time we had before and took it for grant for so long. anyway, new year is about to come and i will post later.</p></li>
-</ul>
-
-
-<h3>God! I Love School, It Feels so good!</h3>
-
-<h2>End of my first EMACS POST, there will be more</h2>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[0x16]]></title>
-    <link href="http://sunus.me/blog/2012/03/25/0x16/"/>
-    <updated>2012-03-25T08:31:32+08:00</updated>
-    <id>http://sunus.me/blog/2012/03/25/0x16</id>
-    <content type="html"><![CDATA[<p>humm, i feel like i am not young anymore. but, i am still doing those 'young people' stuffs that i really really feel some kinda ashamed of. so, it's time to grow up. in fact, i know i am growing up with time goes by.
-in this very moment, right before i turn to 0x16, i would like to post something, something that i wanted to say several days ago.
-first of all, i am so grateful for my family for they gave me a very very nice childhood. even though sometimes i felt it just not enough, but deep down in my heart, i knew they did what they could and i will always grateful for what they've gave to me. i just love to have them around me!
-second, i'd like to thank all of my friends, for the time we spent together, for the happiness and sadness we shared. i'm really really proud of having you guys. I will do everything i can to make you feel the same way as i do, that is, i am hoping one day, you will feel proud of having me as your friend.
-one last thing, i also want to end this with something suddenly came up of my head several days ago,  to my family,  friends and the ones i love:</p>
-
-<p>i am trying hard to to a guy that deserves you.</p>
-
-<p>because you are just so AMAZING.</p>
-
-<p>hope i will not let you guys down before i turn to 0x17.</p>
-
-<p>good night:)</p>
-
-<p>END OF 0x15.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[i'd rather take 951 than 871.]]></title>
-    <link href="http://sunus.me/blog/2012/03/11/id-rather-take-951-than-871/"/>
-    <updated>2012-03-11T08:27:40+08:00</updated>
-    <id>http://sunus.me/blog/2012/03/11/id-rather-take-951-than-871</id>
-    <content type="html"><![CDATA[<p>hi, i've got a busy week, and i still got a lot of codes to write and i am happy that i still got something to do.
-the project tmenny is about to launch and my resume-generator is almost finished. in the very beginning,  i was about to write it in ruby,which i just learned those days. but quickly i found out i might do this in the language i love most, that is, C. so,i wrote so much more lines of codes than ruby/python but i love the way C codes works. simple, clear and fast. and i can figure out almost what is going on under the every line of codes.that is just feels good!</p>
-
-<p>humm, i really miss the days when we ACTUALLY hang out together last semester. sometime i don't feel the same way
-as we're in school while i teach you some programming stuffs or just walk with you,strange.
-even though i met someone new and we had great time, still i would rather going out taking 951 with you.</p>
-
-<p>SK failed again and some of my really good friends are going to leave this school, including the one i just met, which is pretty sad for my to accept.</p>
-
-<p>i am not quite quitting counter-strike yet, as we haven't been 'actually' 'hang out' lately, it's fun playing counter-strike on lan. but if i got chance hanging out with you, i will definitely pick you for sure. it's just 10 times fun than just playing game with nine guys :&lt;</p>
-
-<p>hoping i can getting in 951 soon.
-good night, gotta code tomorrow.</p>
+<p>If you are insterested in me or my life, you can stay here as long as you want, This server will keep up and running for you\<sup>\^</sup></p>
 ]]></content>
   </entry>
   
