@@ -29,7 +29,7 @@ Now, it looks like my plan needs to be changed. I don't know they start recruiti
 
 It's about a week before the exam begin. I am so so unconfident about my written exam, which is the first round of their recruitment. It's so important to me. But I am that kind of guy which barely showed up in the class, instead writing codes in my room:) and always ended up with a little above 60' in the school exams.
 
-  * FYI, I don't code that much, I spent more time with friends and having fun :)
+  * FYI, I don't code that much right now, I spent more time with friends and having fun :)
 
 I prepared the written exam for a few days, noting special, just some basic data structure, algorithm and some basic knowledges. I thought that if i passed this exam, I will have a great shot of getting this offer. Because i know i have so much to show which they can not found in my resume or exam paper.
 
