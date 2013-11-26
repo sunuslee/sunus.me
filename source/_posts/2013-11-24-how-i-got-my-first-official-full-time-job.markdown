@@ -3,7 +3,7 @@ layout: post
 title: "How I got my first official full-time job"
 date: 2013-11-24 13:47
 comments: true
-categories: life, work
+categories: life work
 ---
 
 ### Preface
