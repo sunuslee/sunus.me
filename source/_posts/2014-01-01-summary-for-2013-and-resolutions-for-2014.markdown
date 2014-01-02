@@ -34,6 +34,8 @@ All right, this post is about the Last year and 2014.
 
 * Keep learning new stuffs, be passion about new stuffs and life, dare to break any kinds of limitations.
 
+* I want to make some real contributions to the __Open Source Community__
+
 * I know I will make some new friends, hoping they like me as my friends did.
 
 * I don't know how much difficulties and pressure i'd got in my first official job, but to be honest, I don't expect much of them:)
