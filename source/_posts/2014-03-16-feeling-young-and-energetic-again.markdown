@@ -22,4 +22,4 @@ The roller coasters, haunted houses, etc.. That were so exciting which I haven't
 
 I am just feeling I am still younger and energetic:) and thank you, my new friends for spending your time with me. That's a fantastic experience.
 
-![wet](sources/images/hv-wet.jpg)
+![wet](images/hv-wet.jpg)
