@@ -22,4 +22,7 @@ The roller coasters, haunted houses, etc.. That were so exciting which I haven't
 
 I am just feeling I am still younger and energetic:) and thank you, my new friends for spending your time with me. That's a fantastic experience.
 
+PS, I found a cool stuff call 「[Instax](http://en.wikipedia.org/wiki/Instax)
+」, it's a kind of cameras that can produce the actual photos instantly. No wonder so many gift tips for girls recommend it. it's just interesting and looks cute! i'd love to buy one some time:)
+ 
 ![wet](images/hv-wet.jpg)
