@@ -7,7 +7,9 @@
 	<meta name="author" content="sunus">
     <meta name="google-site-verification" content="KoJbmL6H2A8N09TcMwp6JK7HOeUg_ix7ckaSw2sN4QQ" />
 	
-	<meta name="description" content="um&#8230; kind of feel down today and i just don&#8217;t know why. lol this semester is about to finish, and i don&#8217;t know if i meet my goal &hellip;">
+	<meta name="description" content="弄了差不多半个小时，把blog的嵌入代码插件弄好了：）
+早上看ruby的时候了解到一些类的知识，遇到了之前python迟迟不能解决的一个问题。琢磨了一会，mission accomplished!
+嗯，主要就是一个带counter的urlopener, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -30,7 +32,7 @@
 	<img src="/images/icon.png" alt="Profile Picture" style="width: 160px;">
 </div>
 <h1><a href="/">What happens here, stays in here.</a></h1>
-<p class="subtitle">I am sunus, A quite normal guy happened to know something about programming. Now, I am trying hard to be a guy that deserve you.</p>
+<p class="subtitle">I am sunus, A quite normal guy happened to know something about programming. Now, I am trying hard to be a guy that deserves you.</p>
 <nav id="main-nav"><ul class="main">
 	<li><a href="/">Blog</a></li>
 	<li><a href="/blog/archives">Archives</a></li>
@@ -71,6 +73,270 @@
 				<div id="content" class="inner"><script src="/javascripts/jquery.bpopup.min.js" type="text/javascript"> </script>
 <script src="/javascripts/antiWindows.js" type="text/javascript"> </script>
 
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-28T21:09:04+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/codes/'>codes</a>, <a class='category' href='/blog/categories/python/'>python</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/28/test/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/02/28/test/">First Blog With Codes Inside</a></h1>
+	<div class="entry-content">
+		<p>弄了差不多半个小时，把blog的嵌入代码插件弄好了：）
+早上看ruby的时候了解到一些类的知识，遇到了之前python迟迟不能解决的一个问题。琢磨了一会，mission accomplished!
+嗯，主要就是一个带counter的urlopener, 之前dbci的urlopener在调度上面总是实现地不怎么 &#8216;elegant&#8217;, 如今使用了带counter的urlopener，嗯。。还看得过去:)</p>
+
+<pre><code># this is a urlopener class with a counter.
+# sometimes i just this this urlopener to open urls and make schedulings based on counter
+
+class opener_with_counter(urllib.FancyURLopener):
+    #basically, it's just a URLopener class plus a counter.
+    def __init__(self, *args, **kwargs):
+        urllib.FancyURLopener.__init__(self, *args, **kwargs)
+        self.count = 0
+
+    # a warpper of urlopener.open.
+    def open_with_counter(self, fullurl, data=None):
+        self.count += 1
+        return self.open(fullurl, data)
+</code></pre>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-27T06:52:39+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/未分类/'>未分类</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/27/shit-happens/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/02/27/shit-happens/">Shit Happens.</a></h1>
+	<div class="entry-content">
+		<p>i had some really really rough days lately and i think i kinda fucked up. i am not sure if i can still believe in what I&#8217;ve believed before.</p>
+
+<p>i have really really high expectation for myself but that seems like going to become less possible , because of so many shit going on around this carpland.but, anyway, life moves on! just get some sleep and hang in there, u can make this happen even if this gets harder.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-11T03:00:57+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/未分类/'>未分类</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/11/hello-world-2/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/02/11/hello-world-2/">Hello World!</a></h1>
+	<div class="entry-content">
+		<p>Now i am officially using this domain,</p>
+
+<p>as u can see:</p>
+
+<p>http://sunus.me</p>
+
+<p>happy new year!</p>
+
+<p>love u all!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-22T00:27:06+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/未分类/'>未分类</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/01/22/2011-2012-part-22/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/01/22/2011-2012-part-22/">2011, 2012; Part 2/2</a></h1>
+	<div class="entry-content">
+		<p>humm, first of all, happy Spring Festival to all of you guys!
+Since i posted Part 1/2 of 2011, 2012 some days ago and this thing kept on going on my mind: i still didn&#8217;t finished the second part of that post, so, i will do it now.:)
+i got really really drunk yesterday, wasn&#8217;t i? but anyway, i am very very sober now, so i know now i am using the right words.
+In 2012, i have so many goals to accomplish, i don&#8217;t know if relationship is among them.even if it&#8217;s, i will eventually put it in the last of that list.
+i suddenly found out there are so many things i don&#8217;t know&#8230;.. so, gotta hurry up. and i really really don&#8217;t know what to write right now, because the whole point of writing this one is, this is the second and last part of 2011, 2012 post.and i gotta finished this because the Spring Festival so that i can embrace the future upon me:&lt;
+good night and have fun!
+love u all!! let&#8217;s rock 2012!!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-02T01:39:42+08:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/未分类/'>未分类</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/01/02/2011-2012-part-12/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/01/02/2011-2012-part-12/">2011, 2012; Part 1/2</a></h1>
+	<div class="entry-content">
+		<p>hi there, happy new year!</p>
+
+<p>I just got back to my dorm several hours ago , from downtown tianjin. I was with three of my best friends celebrating the upcoming new year, 2012, and we were having great fun through the last moment of 2011</p>
+
+<p>to the very first cup of beer of 2011. cheers!</p>
+
+<p>so, I decided to post something to end this year and open up the new year. the title,  which I think is brilliant,  If you know  some c programming language or something called ‘comma expression’, I think you will feel the same way</p>
+
+<p>so, here we go.</p>
+
+<p>2011, kinda a tough year for me, even though I wrote/drawn ‘hold on’ and ‘turn on’ on my 2011 edition of QQ icon. but still. not because I made one of the biggest decision of my life on my own, but I have to deal with my problems on my own. I have to learn by myself,  I have cheer me up if I was feel upset. I have to learn to earn the every opportunity out there and finally grab some of them. sometimes I failed,</p>
+
+<p>I told no one, then just keep on reading and learning, coding.  anyway, I learn a lot from 2011 knowledge-wise and horizon-wise.</p>
+
+<p>the later part of 2011, I don’t think much of it. I got back to tjpu, finish my education and keep on learning. my first project ended failure, but, there’s still some people love it and feel interesting, so, not a totally  failure for me. maybe, I will re-open this project someday when time’s right. my second project is under coding now, I still have faith in that, because people need a stuff like that, to keep track of there favorite shows.</p>
+
+<p>the good part of my returning are:</p>
+
+<p>One:</p>
+
+<p>I still have those two best buddies out there waiting for me and help me a lot, I even doubt that I will , some day, do the same things to the others. so, I am really really feel thankful for having you two, hoping we</p>
+
+<p>will get really drunk one day, that the way of us to celebrating out brother-ship.</p>
+
+<p>Two:</p>
+
+<p>that awesome girl, again. I am just feel nothing but lucky to know her and we’re still in a very very good friendship , or it’s not just friendship, I don’t know. the point is, throughout those about three months, she’s just getting better and better. just totally a new person for me,  compare to the first day I met her.  but still, I am not that BAD, am I ?</p>
+
+<p>I know I am a good guy, I am funny,  and I can make a girl laugh a lot while we’re hanging out, and …….</p>
+
+<p>I am ambitious and I have very clear goal  about myself deep down in my heart, but I never talked much about it with friends. so, it’s not a surprise if a girl likes me, I know that too.</p>
+
+<p>but, she is just awesome , I can not think about another word to describe her……</p>
+
+<p>Three:</p>
+
+<p>I know two geek-guy through a friend’s introduction, it’s kinda a luck , I guess. they help me a lot in exams and finally, I have someone to talk about technic stuffs in school. they just let me know, even if we’re in a crap university, there are still a few people who love what their do and will to put there times and energy into it. so, I am not alone. hope we can cooperate in the future. that’s the guy I can look for if I am ready to do something serious, and it’s the best time to find your future partner in the college. I think.</p>
+
+<p>Sum up:</p>
+
+<p>I met three new friends this year and I love them very much</p>
+
+<p>even thought I failed to get the this year’s internship, which I was longing for a very long time, but just look at the bright side, I got more time to learn thing, to make new friends if I had to, so, just be patient. I think when the opportunity comes again, I am having a really good shot of grab it.</p>
+
+<p>2011 , 2011 ; part 1/2 end.</p>
+
+<p>To be continue.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -397,247 +663,6 @@
 
 </article>
 
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-02-02T02:13:23+08:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2011</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2011/02/02/the-reunion-of-class-1997-03elementary-school/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2011/02/02/the-reunion-of-class-1997-03elementary-school/">The Reunion of Class 1997-03(elementary School)</a></h1>
-	<div class="entry-content">
-		<p>when i got into high school,i wanted a reunion party with my elementary  school’s classmates. to see if they’re doing all right and i also wanted to show  what i’ve become during that days with them . and to tell them i will always  remember those guys walk all the way through six years and i TRULY appreciate  it!</p>
-
-<p>when i got into the university , i waned a reunion party with them to.</p>
-
-<p>In this very year,31st Jan,2011. My dream finally came true.We are finally  get back gathering together to do this REUNION stuff.</p>
-
-<p>Girls are getting pretty than ever ! some of them i can still remember what&#8217;  they’re look like or sound like . maybe some of them will stay in my memory  forever,just like ROM ^<sup>.</sup> yeah,that’s true. It’s not embarrassing to said  that,’cause it has been years and just let the past pass.we all have moved  on!</p>
-
-<p>Boy are getting mature.and we ‘re really having a great time @ party .  The beers didn’t waste a single drip:D</p>
-
-<p>The only thing that i considered as a pity is that there’s a girl,a girl that  i really really want to have a talk with,did NOT show up:&lt;…. sigh,hoping  there’s always another chance out there for me . I just want to have a talk with  her,that’s it.</p>
-
-<p>I am really having a great time this night and i love you all!</p>
-
-<p>UPDATE: We are going to do it AGAIN! IT&#8217;S GONNA BE CRAZY! CAN’T WAIT TO SEE  U!</p>
-
-<p>[caption id=&#8221;attachment_101&#8221; align=&#8221;aligncenter&#8221; width=&#8221;300&#8221; caption=&#8221;the kids are grownup!&#8221;]<a href="http://sunus.me/wp-content/uploads/2011/02/e696b0e785a7e78987-047.jpg"><img src="http://sunus.me/wp-content/uploads/2011/02/e696b0e785a7e78987-047.jpg?w=300" alt="the kids are grownup!" /></a>[/caption]</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-11T21:19:12+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2011</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2011/01/11/hello-world-3/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2011/01/11/hello-world-3/">Hello World!</a></h1>
-	<div class="entry-content">
-		<p>Welcome to <a href="https://wordpress.com/">WordPress.com</a>.</p>
-
-<p>Now,i  officially moved in WordPress.</p>
-
-<p>Farewell LiveSpace!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-19T06:53:54+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2010</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2010/11/19/no-title/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2010/11/19/no-title/">No Title.</a></h1>
-	<div class="entry-content">
-		<p>hey hi,it&#8217;s been a while after the last post,i think i am doing all right those days , even though the progress was not as significant as i excepted. the more i learn , the more i need to learn .this is the most impressive thought i have ever got,but its ok to keep on going and fight for my future.My goals are remain the same , no matter how hard the code is, one day, i will eventually write my own software. <br/>
-actually,i am on my way to Nanning right now,to meet a long-gone friends,that dude was my best friend in elementary school , we also played video games on weekends that was the purest joy at that time and i will never forget.i hope,we can be as close as the old days,like my other friends do. <br/>
-here is another case , which ultimately leads to the trip to Nanning, i am going to meet a girl , a girl that sunus wants her to be smart,cute,and beautiful . sunus is always be the guy who can make girls feel happy with him. hopefully this nothing goes wrong. <br/>
-we&#8217;ll have dinner,a new 3D thrilling movie as simple as that -.-Do not get me wrong. <br/>
-cant wait to meet you guys and have a nice day.i am almost there! <br/>
-Nov 17,2010</p>
-
-<p> </p>
-
-<p>UPDATE #1:</p>
-
-<p>my friend is living a pretty good life in Nanning,got a girlfriend and rent a apartment.kinda good:D</p>
-
-<p>and my new friend,she is ,uh, sort of different from other my female friends,but she is also pretty good,too.</p>
-
-<p>Nov,18,2010.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-10T07:59:39+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2010</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2010/09/10/new-life-officially-begins/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2010/09/10/new-life-officially-begins/">New Life Officially Begins.</a></h1>
-	<div class="entry-content">
-		<p>After several month&#8217;s suffering,sunus is out of school as he wished and now he is on his way home,on the train. <br/>
-finally,i made up my mind to get out of school to put everything i got to what i love for years , it wasn&#8217;t as tough as you thought . but it calls for courage and supports from all aspects to make it happen .luckily , i have them both ! so right now , it is my time to spark , to let the rest of the world know what i am doing and what exactly i am capable of . of course it is a long and tough way to go , but i firmly believe in myself as i always do . No matter how the world changes ,the future of mine is bright . so , i will just code my own future .</p>
-
-<p>I got off the train , and i will get in the plane shortly.:D</p>
-
-<p>so wish me luck!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-05-04T09:57:11+08:00" pubdate data-updated="true">May 4<span>th</span>, 2010</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/未分类/'>未分类</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2010/05/04/here-comes-the-rain-again/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title"><a href="/blog/2010/05/04/here-comes-the-rain-again/">Here Comes the Rain Again</a></h1>
-	<div class="entry-content">
-		<p>Hi there, it has been a while since last time I wrote blog directly on my laptop . Now i am not taking any of classes , of course its about one o’clock in the midnight ! But what i want to emphasize is that THIS blog means something to me, something that i have thought it over and over . So, i just spill it out with the rain falling down to the ground.</p>
-
-<p>I always consider myself as one of the most OUTSTANDING guy in the campus who cherishes his time to do things that he like and matters to him. Of course that thing is always be the Programming,codes and datas for me. and i did do as i described above. But now,or more specifically , recently i spent so so so much time with girls and having fun. I don’t like the way i spent my time , because i didn’t come here to dating or hanging out with girls after all. I mean, i don’t blame any of the girls that i have met or played with. In fact , you guys are just wonderful,gorgeous and cute. Moreover some of you did attract me very much so that i just simply could not stop thinking of you for several days till i realized  you’re just a passerby in my life, or maybe not,who knows :D</p>
-
-<p>Now , the rain just stopped but my fingers keep on typing :D</p>
-
-<p>Despite the fact that lately i was with girls quite often , i still DO NOT think it do much harm to me . Because of that sort of shy , tacitly kid has gone,even though i don’t how far it’s , but still it’s good. Especially when i witnessed the whole progress of one of my friend’s relationship with his ex-girlfriend came to an end in such a few days, I finally realized how important it’s to know how to deal with girls,how to talk to them and so many how-to-do stuffs. I just did a better job than that tragedy roommate,So please don’t feel me like a date artist or some kind of expert or something. lol.Therefore,I just want to thank those girls i met early years,even though none of you is my girlfriend but it really really doesn’t matter at all ! i really really mean it .Your companionships are one of the most beautiful,valuable things i have ever got.  As a consequence, i bet my future girlfriend will thank you guys too,for you turn me into a nice,sweet,humors,thoughtful,considerate boyfriend,while is definitely more than qualified. (and so many adj(s) will be added long as i saw them)</p>
-
-<p>It&#8217;s time to focus on what its most important to me,like i said,coding,programming and datas. That’s why i wrote this blog in such a late night, There&#8217;s something i want to be memorized while something i just want to get rid of. From now on,I will manage my times wisely and perfectly.First of all, Huffman Codes is about to come to an end.And the graph is a whole new chapter that’s to be taken care of.So, Since i have gone that far,why don’t i just go father ?</p>
-
-<p>alright,it’s about two 2am but i think it’s worth posting a blog like this.Oh i almost forget there’s a English test tomorrow,but what the hell. I already proved myself is the BEST student in the class by the cet-4 test. i just do not have to do that thing again and again.</p>
-
-<p>ONE LAST WORD :</p>
-
-<p>SUNUS DE BEST!</p>
-
-<p>good night and have a nice day :D</p>
-
-		
-		
-	</div>
-
-</article>
-
 <nav id="pagenavi">
     
         <a href="/blog/page/3/" class="prev">Prev</a>
@@ -649,7 +674,7 @@ finally,i made up my mind to get out of school to put everything i got to what i
 </nav>
 </div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2013
+			<footer id="footer" class="inner">Copyright &copy; 2014
 
     sunus
 
