@@ -20,4 +20,4 @@ On my birthday, I went to Xixi National Park, it has a great landscape with tree
 
 Another thing is I rented an awesome apartment. It's so great and it even got a digital panel in the room, it can control all the electrical devices in the room, it's really amazing! And I did a lot of housework as well, because I will live in this apartment for some time, I don't want it to be a mass.
 
-And the last thing is, I will sign up for Alibaba tomorrow, finally, wow. I don't know what my days will be, but I think it will be so much funny & Exciting! Let's wait to see.
+And the last thing is, I will sign up for Alibaba tomorrow, finally, wow. I don't know what my days will be, but I think it will be so much funny & Exciting! Let's wait and see.
