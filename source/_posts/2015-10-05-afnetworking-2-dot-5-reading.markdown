@@ -6,9 +6,6 @@ comments: true
 categories:
 ---
 
-
-# AFNetworking 2.0 是如何发送网络请求的?
-
 ## 原始方法
 我们在开发 iOS , Mac App 的过程当中一定有接触过发送网络请求, 最初我们有使用的是这样的:
 
