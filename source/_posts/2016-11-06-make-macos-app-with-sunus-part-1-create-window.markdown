@@ -18,7 +18,7 @@ categories:
 
 打开 Xcode , 新建项目的项目, 会有一个默认的 Window 提供, 我之前都没怎么注意, 是这样的
 
-![Default_Window](imgs/Default_Window.png)
+![Default_Window](images/Default_Window.png)
 
     这个 Window 初看起来也还好, 但是有时候我们会有一些希望能够自定义的地方. 这是 Xcode 的 GUI 界面就显得有些不够用了. 我们接下来会详细的研究如何通过代码来自定义我们的 Window.
 
@@ -32,7 +32,7 @@ categories:
 
     默认情况下,这三个区域, 如图显示是这样(黑色边框的部分是 Toolbar)
 
-    ![Window_Layout](imgs/window_layout.png)
+    ![Window_Layout](images/window_layout.png)
 
     * 要显示 Toolbar 需要实现 __NSToolbarDelegate__ 里的几个方法
 
@@ -40,7 +40,7 @@ categories:
 
     我们希望实现一个这样的 Window
 
-    ![Window_Demo](imgs/window_demo.png)
+    ![Window_Demo](images/window_demo.png)
 
     看着还不错😋
 
